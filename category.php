@@ -32,7 +32,7 @@ get_header(); ?>
 				<h1><?php single_cat_title(); ?></h1>
 			</div>
 			<div class="col-md-3">
-				<a href="#" title="#"><img src="<?php echo get_template_directory_uri(); ?>/images/request-more-info.png" alt="Request More Information" /></a>
+				<a href="#" title="Request More Information" class="more-info"><img src="<?php echo get_template_directory_uri(); ?>/images/request-more-info.png" alt="Request More Information" /></a>
 			</div>
 			<div class="col-md-12">
 				<hr />
@@ -41,29 +41,31 @@ get_header(); ?>
 				<div class="description">
 					<?php echo category_description(); ?>
 				</div>
-			<?php if ( have_posts() ) : ?>
-
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-
-						<div class="accordion">
-							<?php the_post_thumbnail(); ?>
-							<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-							<?php $price = get_post_meta( $post->ID, 'wpcf-price', true ); ?>
-							Price: <?php echo $price; ?>
-						</div>
-
-				<?php endwhile;
-				endif;
-				/* Restore original Post Data */
-				wp_reset_postdata();
-	 		?>
+				<ul class="inventory">
+					<?php 
+						$args = array(
+							'show_count' => 1,
+							'child_of' => 120,
+							'depth' => 1,
+							'title_li' => ''
+						);
+						wp_list_categories( $args ); 
+					?> 
+				</ul>
  			</div>
  			<div class="col-md-3">
- 				<?php get_sidebar(); ?>
+ 				<?php get_sidebar( 'right' ); ?>
  			<div>
 		</div>
 	</div>
 </div>
-
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.inventory li').click(function(){
+		var cat_url = $(this).children('a').attr("href");
+		window.open(cat_url, "_self");
+	});
+});
+</script>
 <?php get_footer(); ?>
