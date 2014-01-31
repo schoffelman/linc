@@ -53,7 +53,7 @@ get_header(); ?>
 					?> 
 				</ul>
  			</div>
- 			<div class="col-md-3">
+ 			<div class="col-md-3 rightsidebar">
  				<?php get_sidebar( 'right' ); ?>
  			<div>
 		</div>

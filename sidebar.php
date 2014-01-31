@@ -12,4 +12,7 @@
 
 
 
-this is just a test
+echo '<div class="sidebar">';
+
+
+echo '</div>';
