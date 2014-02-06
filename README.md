@@ -1,4 +1,5 @@
-linc
+Linc WordPress theme
 ====
 
-linc
+This theme is built under The MIT License (MIT) http://opensource.org/licenses/MIT. 
+
