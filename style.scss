@@ -68,13 +68,19 @@ h6 			{ font-size: 0.8em; }
 .container { width: 960px; }
 .grid-gutter-width { width: 20px; }
 
+body.home {
+	header {
+		background: transparent url(images/home-bg.jpg) repeat-x 50% top;
+	}
+}
+
 body {
 	header.navbar {
 		border: 0;
 		margin-bottom:0;
 	}
 	header {
-		background: transparent url(images/interior-bg.jpg) no-repeat 50% top;
+		background: transparent url(images/interior-bg.jpg) repeat-x 50% top;
 		height: 146px;
 		margin-top: -1px;
 		.banner {
@@ -106,6 +112,13 @@ body {
 		}
 		.main-navigation {
 			margin-top: 2.75em;
+			padding: 0;
+			.desktop {
+				display: block;
+			} 
+			.mobile {
+				display: none;
+			}
 			ul {
 				li {
 					display: inline-block;
@@ -129,6 +142,18 @@ body {
 					}
 				}
 			}
+		}
+	}
+	.jumbotron {
+		background: transparent url(images/home-bg.jpg) repeat-x bottom center;
+		min-height: 440px;
+		.home-banner {
+			background: $black;
+			height: 360px;
+			margin: 0 auto;
+			opacity:0.85;
+			filter:alpha(opacity=85); /* For IE8 and earlier */
+			width: 940px;
 		}
 	}
 	.breadcrumbs {
@@ -271,6 +296,15 @@ body {
 	}
 }
 
-
+@media all and (max-width: 991px) {
+	.main-navigation {
+		.desktop {
+			display: none;
+		}
+		.mobile {
+			display: block;
+		}
+	}
+}
 
 

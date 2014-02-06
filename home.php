@@ -12,8 +12,8 @@
 get_header(); ?>
 
 	<div id="jumbotron" class="jumbotron">
-		<div id="home-banner" class="container" role="main">
-test
+		<div id="home-banner" class="container home-banner" role="main">
+			<div></div>
 		</div><!-- #home-banner -->
 	</div><!-- #jumbotron -->
 	<div id="primary" class="content container">
@@ -28,7 +28,7 @@ test
 					$the_query->the_post(); ?>
 
 					<div class="col-md-3">
-						<?php the_post_thumbnail(); ?>
+						<?php the_post_thumbnail(array(220,175)); ?>
 						<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
 						<?php $price = get_post_meta( $post->ID, 'wpcf-price', true ); ?>
 						Price: <?php echo $price; ?>

@@ -59,11 +59,14 @@ h6 {
 .grid-gutter-width {
   width: 20px; }
 
+body.home header {
+  background: transparent url(images/home-bg.jpg) repeat-x 50% top; }
+
 body header.navbar {
   border: 0;
   margin-bottom: 0; }
 body header {
-  background: transparent url(images/interior-bg.jpg) no-repeat 50% top;
+  background: transparent url(images/interior-bg.jpg) repeat-x 50% top;
   height: 146px;
   margin-top: -1px; }
   body header .banner {
@@ -90,7 +93,12 @@ body header {
   body header h1.site-title a:hover {
     text-decoration: none; }
   body header .main-navigation {
-    margin-top: 2.75em; }
+    margin-top: 2.75em;
+    padding: 0; }
+    body header .main-navigation .desktop {
+      display: block; }
+    body header .main-navigation .mobile {
+      display: none; }
     body header .main-navigation ul li {
       display: inline-block;
       padding-left: 2em; }
@@ -107,6 +115,17 @@ body header {
       body header .main-navigation ul li:hover a {
         color: #669932;
         cursor: pointer; }
+body .jumbotron {
+  background: transparent url(images/home-bg.jpg) repeat-x bottom center;
+  min-height: 440px; }
+  body .jumbotron .home-banner {
+    background: black;
+    height: 360px;
+    margin: 0 auto;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    /* For IE8 and earlier */
+    width: 940px; }
 body .breadcrumbs {
   background: #666633;
   color: #517928;
@@ -202,3 +221,9 @@ body footer {
     font-weight: 300; }
   body footer .bbb {
     float: right; }
+
+@media all and (max-width: 991px) {
+  .main-navigation .desktop {
+    display: none; }
+  .main-navigation .mobile {
+    display: block; } }
