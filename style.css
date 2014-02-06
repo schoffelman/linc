@@ -29,13 +29,29 @@ h3 {
   font-size: 1.6em; }
 
 h4 {
-  font-size: 1.2em; }
+  font-size: 1.3em; }
 
 h5 {
   font-size: 1em; }
 
 h6 {
   font-size: 0.8em; }
+
+.aligncenter {
+  margin: 0 auto;
+  text-align: center; }
+
+.alignleft {
+  float: left;
+  text-align: left; }
+
+.alignright {
+  float: right;
+  text-align: right; }
+
+.green,
+.green a {
+  color: #517928; }
 
 .container {
   width: 960px; }
@@ -44,6 +60,7 @@ h6 {
   width: 20px; }
 
 body header.navbar {
+  border: 0;
   margin-bottom: 0; }
 body header {
   background: transparent url(images/interior-bg.jpg) no-repeat 50% top;
@@ -102,14 +119,32 @@ body .breadcrumbs {
   body .breadcrumbs span {
     color: #b4b476; }
 body .main {
-  background: linear-gradient(#a4a45d 3em, #cccc99);
-  background: -webkit-radial-gradient(#a4a45d 3em, #cccc99);
-  background: -moz-radial-gradient(#a4a45d 3em, #cccc99); }
+  background: #cccc99 url(images/bg-grad.gif) repeat-x 0 0; }
   body .main .content {
     padding-bottom: 20em; }
     body .main .content .more-info {
       display: block;
-      margin: 20px 0 10px; }
+      margin: 35px 0 10px; }
+    body .main .content h1.page-title {
+      color: white;
+      font-family: hendobree_serifregular, Georgia, Times, serif;
+      font-weight: 100;
+      margin-top: 30px; }
+    body .main .content .products {
+      min-height: 325px; }
+      body .main .content .products a {
+        display: block; }
+        body .main .content .products a img {
+          border-bottom: 5px solid #517928; }
+      body .main .content .products .price a {
+        color: #517928;
+        display: inline; }
+      body .main .content .products a:hover img {
+        border-bottom: 5px solid #ff9933; }
+      body .main .content .products h4 a {
+        color: black; }
+      body .main .content .products h4 a:hover {
+        color: black; }
     body .main .content .rightsidebar {
       padding-right: 0; }
     body .main .content .sidebar h3 {
@@ -125,6 +160,8 @@ body .main {
           border-bottom: 5px solid #517928; }
         body .main .content .sidebar ul.featured li a {
           color: black; }
+        body .main .content .sidebar ul.featured li a:hover img {
+          border-bottom: 5px solid #ff9933; }
     body .main .content hr {
       border-top: 1px solid #666633; }
     body .main .content ul.inventory {
