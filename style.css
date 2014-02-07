@@ -61,6 +61,18 @@ h6 {
 
 body.home header {
   background: transparent url(images/home-bg.jpg) repeat-x 50% top; }
+body.home .content .featured-items .featured {
+  min-height: 325px; }
+  body.home .content .featured-items .featured a {
+    color: black; }
+  body.home .content .featured-items .featured a.thumb {
+    display: block;
+    overflow: hidden; }
+    body.home .content .featured-items .featured a.thumb img {
+      border-bottom: 5px solid #517928;
+      height: 175px; }
+  body.home .content .featured-items .featured a.thumb:hover img {
+    border-bottom: 5px solid #ff9933; }
 
 body header.navbar {
   border: 0;
@@ -119,12 +131,17 @@ body .jumbotron {
   background: transparent url(images/home-bg.jpg) repeat-x bottom center;
   min-height: 440px; }
   body .jumbotron .home-banner {
+    height: 360px;
+    margin: 0 auto;
+    padding: 0 2px;
+    width: 940px; }
+  body .jumbotron .home-banner-bg {
     background: black;
+    filter: alpha(opacity=85);
+    /* For IE8 and earlier */
     height: 360px;
     margin: 0 auto;
     opacity: 0.85;
-    filter: alpha(opacity=85);
-    /* For IE8 and earlier */
     width: 940px; }
 body .breadcrumbs {
   background: #666633;
@@ -151,10 +168,12 @@ body .main {
       margin-top: 30px; }
     body .main .content .products {
       min-height: 325px; }
-      body .main .content .products a {
-        display: block; }
-        body .main .content .products a img {
-          border-bottom: 5px solid #517928; }
+      body .main .content .products a.thumb {
+        display: block;
+        overflow: hidden; }
+        body .main .content .products a.thumb img {
+          border-bottom: 5px solid #517928;
+          height: 175px; }
       body .main .content .products .price a {
         color: #517928;
         display: inline; }
@@ -223,7 +242,11 @@ body footer {
     float: right; }
 
 @media all and (max-width: 991px) {
-  .main-navigation .desktop {
+  body .container {
+    width: 100%; }
+  body .main-navigation .desktop {
     display: none; }
-  .main-navigation .mobile {
-    display: block; } }
+  body .main-navigation .mobile {
+    display: block; }
+  body .jumbotron .home-banner-bg {
+    width: 100%; } }

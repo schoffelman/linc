@@ -88,16 +88,14 @@ get_header(); ?>
 					// The Loop
 					if ( $product_listing->have_posts() ) : while ( $product_listing->have_posts() ) : $product_listing->the_post(); ?>
 
-						<div class="col-md-3 products">
-							<?php
-								echo '<a href="' . get_permalink() . '" title="'. get_the_title() .'">';
-									if ( has_post_thumbnail() ) {
-										the_post_thumbnail(array(210, 175));
-									} else {
-										echo '<img src="'. get_template_directory_uri() .'/images/inventory-default.png" width="210" title="'. get_the_title() .'" />';
-									}
-								echo '</a>';
-							?>
+						<div class="col-md-3 products">						
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="thumb">
+								<?php if ( has_post_thumbnail() ) {
+									the_post_thumbnail(array(210, 175));
+								} else {
+									echo '<img src="'. get_template_directory_uri() .'/images/inventory-default.png" width="210" title="'. get_the_title() .'" />';
+								} ?>
+							</a>
 							<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
 							<?php $price = get_post_meta( $post->ID, 'wpcf-price', true ); ?>
 							<span class="price">Price: <?php
