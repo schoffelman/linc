@@ -20,6 +20,7 @@ Fonts: Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome -
   font-style: normal; }
 
 h1 {
+  font-family: hendobree_serifregular, Georgia, Times, serif;
   font-size: 2.6em; }
 
 h2 {
@@ -52,6 +53,19 @@ h6 {
 .green,
 .green a {
   color: #517928; }
+
+.clear {
+  clear: both; }
+
+.clearleft {
+  clear: left; }
+
+.clearright {
+  clear: right; }
+
+hr {
+  border-top: 1px solid #666633;
+  clear: both; }
 
 .container {
   width: 960px; }
@@ -133,7 +147,8 @@ body header {
         cursor: pointer; }
 body .jumbotron {
   background: transparent url(images/home-bg.jpg) repeat-x bottom center;
-  min-height: 440px; }
+  min-height: 440px;
+  margin-bottom: 10px; }
   body .jumbotron .home-banner {
     height: 360px;
     margin: 0 auto;
@@ -156,6 +171,14 @@ body .breadcrumbs {
     margin: 0 1px 0 4px; }
   body .breadcrumbs span {
     color: #b4b476; }
+body .home-content .entry {
+  margin-left: 0;
+  padding-left: 0; }
+  body .home-content .entry h1 {
+    color: white;
+    margin-bottom: 0.8em; }
+body .home-content .more-info {
+  padding-top: 2em; }
 body .main {
   background: #cccc99 url(images/bg-grad.gif) repeat-x 0 0; }
   body .main .content {
@@ -202,8 +225,6 @@ body .main {
           color: black; }
         body .main .content .sidebar ul.featured li a:hover img {
           border-bottom: 5px solid #ff9933; }
-    body .main .content hr {
-      border-top: 1px solid #666633; }
     body .main .content ul.inventory {
       border-top: 1px solid #a3a35d;
       list-style: none;

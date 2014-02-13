@@ -49,7 +49,7 @@ $navfontfamily: hendobree_serifregular, Georgia, Times, serif;
 
 // general styles
 
-h1 			{ font-size: 2.6em; }
+h1 			{ font-family: $navfontfamily; font-size: 2.6em; }
 h2 			{ font-size: 2em; }
 h3 			{ font-size: 1.6em; }
 h4 			{ font-size: 1.3em; }
@@ -61,6 +61,11 @@ h6 			{ font-size: 0.8em; }
 .alignright { float: right; text-align: right; }
 .green, 
 .green a 	{ color: $greengrass; }
+.clear		{ clear: both; }
+.clearleft	{ clear: left; }
+.clearright { clear: right; }
+
+hr 			{ border-top: 1px solid $greentan; clear: both; }
 
 
 // general structure
@@ -176,6 +181,7 @@ body {
 	.jumbotron {
 		background: transparent url(images/home-bg.jpg) repeat-x bottom center;
 		min-height: 440px;
+		margin-bottom: 10px;
 		.home-banner {
 			height: 360px;
 			margin: 0 auto;
@@ -204,6 +210,19 @@ body {
 		}
 		span {
 			color: $lighttan;
+		}
+	}
+	.home-content {
+		.entry {
+			margin-left: 0;
+			padding-left: 0;
+			h1 {
+				color: $white;
+				margin-bottom: 0.8em;
+			}
+		}
+		.more-info {
+			padding-top: 2em;
 		}
 	}
 	.main {
@@ -279,9 +298,6 @@ body {
 						}
 					}
 				}
-			}
-			hr {
-				border-top: 1px solid $greentan;
 			}
 			ul.inventory {
 				border-top: 1px solid $bordertan;
