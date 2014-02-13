@@ -13,6 +13,7 @@ Fonts: Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome -
 
 // colors
 $white: #ffffff;
+$offwhite: #f0f0e0;
 $black: #000000;
 $tan: #cccc99;
 $darktan: #a4a45d;
@@ -65,7 +66,7 @@ h6 			{ font-size: 0.8em; }
 .clearleft	{ clear: left; }
 .clearright { clear: right; }
 
-hr 			{ border-top: 1px solid $greentan; clear: both; }
+hr 			{ border-top: 1px solid $greentan; clear: both; margin-bottom: 40px; }
 
 
 // general structure
@@ -74,7 +75,7 @@ hr 			{ border-top: 1px solid $greentan; clear: both; }
 .container { width: 960px; }
 .grid-gutter-width { width: 20px; }
 
-.home {
+body.home {
 	background: $tan url(images/bg-grad.gif) repeat-x 0 585px;
 	header {
 		background: transparent url(images/home-bg.jpg) repeat-x 50% top;
@@ -117,7 +118,7 @@ body {
 			background: $green url(images/header-leaf.png) no-repeat;
 			background-position:calc(50% - 24em) 0;
 			border-bottom: 5px solid $lightgreen;
-			height: 105px;
+			height: 106px;
 			position: relative;
 			top: 40px;
 			white-space: nowrap;
@@ -206,11 +207,20 @@ body {
 			color: $orange;
 		}
 		span.div {
-			margin: 0 1px 0 4px;
+			margin: 0 11px 0 14px;
+			color: $lightgreen;
 		}
 		span {
 			color: $lighttan;
 		}
+	}
+	.prev-page {
+		margin: 0 15px 0 0;
+		float: left;
+	}
+	.link-page-title {
+		display: block;
+		padding-top: 3px;
 	}
 	.home-content {
 		.entry {
@@ -238,6 +248,38 @@ body {
 				font-family: $navfontfamily;
 				font-weight: 100;
 				margin-top: 30px;
+				a {
+					color: $white;
+				}
+			}
+			.gallery {
+
+			}
+			.inventory-entry {
+				background: $white;
+				padding: 20px;
+				.price {
+					background: $offwhite;
+					margin: 0px;
+					padding: 25px 20px;
+					position: relative;
+					h3 {
+						margin: 0;
+						padding: 0;
+					}
+					.phone-icon {
+						position: absolute;
+						right: 85px;
+						top: 22px;
+					}
+					.email-icon {
+						position: absolute;
+						right: 30px;
+						top: 22px;
+					}
+				}
+				.gallery {
+				}
 			}
 			.products {
 				min-height: 325px;

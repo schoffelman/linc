@@ -65,7 +65,8 @@ h6 {
 
 hr {
   border-top: 1px solid #666633;
-  clear: both; }
+  clear: both;
+  margin-bottom: 40px; }
 
 .container {
   width: 960px; }
@@ -73,21 +74,21 @@ hr {
 .grid-gutter-width {
   width: 20px; }
 
-.home {
+body.home {
   background: #cccc99 url(images/bg-grad.gif) repeat-x 0 585px; }
-  .home header {
+  body.home header {
     background: transparent url(images/home-bg.jpg) repeat-x 50% top; }
-  .home .content .featured-items .featured {
+  body.home .content .featured-items .featured {
     min-height: 325px; }
-    .home .content .featured-items .featured a {
+    body.home .content .featured-items .featured a {
       color: black; }
-    .home .content .featured-items .featured a.thumb {
+    body.home .content .featured-items .featured a.thumb {
       display: block;
       overflow: hidden; }
-      .home .content .featured-items .featured a.thumb img {
+      body.home .content .featured-items .featured a.thumb img {
         border-bottom: 5px solid #517928;
         height: 175px; }
-    .home .content .featured-items .featured a.thumb:hover img {
+    body.home .content .featured-items .featured a.thumb:hover img {
       border-bottom: 5px solid #ff9933; }
 
 body header.navbar {
@@ -101,7 +102,7 @@ body header {
     background: #003300 url(images/header-leaf.png) no-repeat;
     background-position: calc(50% - 24em) 0;
     border-bottom: 5px solid #669932;
-    height: 105px;
+    height: 106px;
     position: relative;
     top: 40px;
     white-space: nowrap; }
@@ -168,9 +169,16 @@ body .breadcrumbs {
   body .breadcrumbs a {
     color: #ff9933; }
   body .breadcrumbs span.div {
-    margin: 0 1px 0 4px; }
+    margin: 0 11px 0 14px;
+    color: #669932; }
   body .breadcrumbs span {
     color: #b4b476; }
+body .prev-page {
+  margin: 0 15px 0 0;
+  float: left; }
+body .link-page-title {
+  display: block;
+  padding-top: 3px; }
 body .home-content .entry {
   margin-left: 0;
   padding-left: 0; }
@@ -191,6 +199,27 @@ body .main {
       font-family: hendobree_serifregular, Georgia, Times, serif;
       font-weight: 100;
       margin-top: 30px; }
+      body .main .content h1.page-title a {
+        color: white; }
+    body .main .content .inventory-entry {
+      background: white;
+      padding: 20px; }
+      body .main .content .inventory-entry .price {
+        background: #f0f0e0;
+        margin: 0px;
+        padding: 25px 20px;
+        position: relative; }
+        body .main .content .inventory-entry .price h3 {
+          margin: 0;
+          padding: 0; }
+        body .main .content .inventory-entry .price .phone-icon {
+          position: absolute;
+          right: 85px;
+          top: 22px; }
+        body .main .content .inventory-entry .price .email-icon {
+          position: absolute;
+          right: 30px;
+          top: 22px; }
     body .main .content .products {
       min-height: 325px; }
       body .main .content .products a.thumb {
