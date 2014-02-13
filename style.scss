@@ -178,12 +178,12 @@ body {
 			width: 940px;
 		}
 		.home-banner-bg {
-			background: $black;
-			filter:alpha(opacity=85); /* For IE8 and earlier */
 			height: 360px;
 			margin: 0 auto;
-			opacity:0.85;
 			width: 940px;
+			.cycloneslider-caption-title {
+				font-family: $navfontfamily;
+			}
 		}
 	}
 	.breadcrumbs {
