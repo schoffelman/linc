@@ -13,8 +13,9 @@ get_header(); ?>
 
 	<div id="jumbotron" class="jumbotron">
 		<div id="home-banner" class="container home-banner" role="main">
-			<div class="home-banner-bg"></div>
-			<?php // if ( function_exists('show_nivo_slider') ) { show_nivo_slider(); } ?>
+			<div class="home-banner-bg">
+				<?php if( function_exists('cyclone_slider') ) cyclone_slider('homepage-slideshow'); ?>
+			</div><!-- .home-banner-bg -->
 		</div><!-- #home-banner -->
 	</div><!-- #jumbotron -->
 	<div id="primary" class="content container">
