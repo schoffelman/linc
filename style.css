@@ -59,20 +59,22 @@ h6 {
 .grid-gutter-width {
   width: 20px; }
 
-body.home header {
-  background: transparent url(images/home-bg.jpg) repeat-x 50% top; }
-body.home .content .featured-items .featured {
-  min-height: 325px; }
-  body.home .content .featured-items .featured a {
-    color: black; }
-  body.home .content .featured-items .featured a.thumb {
-    display: block;
-    overflow: hidden; }
-    body.home .content .featured-items .featured a.thumb img {
-      border-bottom: 5px solid #517928;
-      height: 175px; }
-  body.home .content .featured-items .featured a.thumb:hover img {
-    border-bottom: 5px solid #ff9933; }
+.home {
+  background: #cccc99 url(images/bg-grad.gif) repeat-x 0 585px; }
+  .home header {
+    background: transparent url(images/home-bg.jpg) repeat-x 50% top; }
+  .home .content .featured-items .featured {
+    min-height: 325px; }
+    .home .content .featured-items .featured a {
+      color: black; }
+    .home .content .featured-items .featured a.thumb {
+      display: block;
+      overflow: hidden; }
+      .home .content .featured-items .featured a.thumb img {
+        border-bottom: 5px solid #517928;
+        height: 175px; }
+    .home .content .featured-items .featured a.thumb:hover img {
+      border-bottom: 5px solid #ff9933; }
 
 body header.navbar {
   border: 0;
@@ -242,9 +244,21 @@ body footer {
 @media all and (max-width: 991px) {
   body .container {
     width: 100%; }
-  body .main-navigation .desktop {
-    display: none; }
-  body .main-navigation .mobile {
-    display: block; }
+  body header h1.site-title,
+  body header h1.site-title a {
+    top: -0.15em; }
+  body header .main-navigation {
+    margin-top: 4.5em;
+    margin-left: .75em; }
+    body header .main-navigation .desktop {
+      display: none; }
+    body header .main-navigation .mobile {
+      display: block; }
   body .jumbotron .home-banner-bg {
     width: 100%; } }
+@media (max-width: 680px) {
+  body.home .content .featured-items .featured {
+    min-height: 250px; }
+
+  body header.navbar {
+    margin-bottom: 20px; } }
