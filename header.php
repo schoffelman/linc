@@ -72,12 +72,13 @@
 				<nav id="site-navigation" class="col-md-8 main-navigation" role="navigation">
 					<div class="desktop"><?php wp_nav_menu( 
 														array( 	'theme_location' => 'main-navigation', 
-																'menu_class' => 'nav-menu' ) ); 
+																'menu_class'	 => 'nav-menu' ) ); 
 					?></div>
 					<div class="mobile"><?php wp_nav_menu( 
-														array( 	'theme_location' => 'main-navigation', 
-																'menu_class' => 'mobile-nav-menu',
-																'items_wrap' => '<select id="%1$s" class="%2$s">%3$s</select>' ) ); 
+														array(  'theme_location' => 'main-navigation', 
+																'menu_class'	 => 'mobile-nav-menu',
+														        'items_wrap'     => '<select id="drop-nav"><option value="">Select a page...</option>%3$s</select>',
+														        'walker' 		 => new Nav_Menu_Dropdown()));
 					?></div>
 				</nav><!-- #site-navigation -->
 
