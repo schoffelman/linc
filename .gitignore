@@ -1,3 +1,4 @@
 .sass-cache/*
+.sass-cache
 *.log
 .DS_Store
