@@ -190,7 +190,7 @@ body .home-content .more-info {
 body .main {
   background: #cccc99 url(images/bg-grad.gif) repeat-x 0 0; }
   body .main .content {
-    padding-bottom: 20em; }
+    padding-bottom: 10em; }
     body .main .content .more-info {
       display: block;
       margin: 35px 0 10px; }
@@ -201,6 +201,12 @@ body .main {
       margin-top: 30px; }
       body .main .content h1.page-title a {
         color: white; }
+    body .main .content .gallery dl.gallery-item {
+      min-width: 120px; }
+    body .main .content .gallery dt.gallery-icon img {
+      max-height: 120px;
+      max-width: 120px;
+      overflow: hidden; }
     body .main .content .inventory-entry {
       background: white;
       padding: 20px; }

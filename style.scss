@@ -238,7 +238,7 @@ body {
 	.main {
 		background: $tan url(images/bg-grad.gif) repeat-x 0 0;
 		.content {
-			padding-bottom: 20em;
+			padding-bottom: 10em;
 			.more-info {
 				display: block;
 				margin: 35px 0 10px;
@@ -253,7 +253,14 @@ body {
 				}
 			}
 			.gallery {
-
+				dl.gallery-item {
+					min-width: 120px;
+				}
+				dt.gallery-icon img {
+					max-height: 120px;
+					max-width: 120px;
+					overflow: hidden;
+				}
 			}
 			.inventory-entry {
 				background: $white;
