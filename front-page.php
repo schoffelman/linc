@@ -35,7 +35,7 @@ get_header(); ?>
 	 	<div class="clear"></div>
 		<div class="row featured-items">
 		<?php // The Query
-			$args = array( 'cat' => '124' );
+			$args = array( 'category_name' => 'featured-items', 'posts_per_page' => '4' );
 			$the_query = new WP_Query( $args );
 
 			// The Loop
