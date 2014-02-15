@@ -39,7 +39,7 @@
 <!-- start styles -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-<link rel="Shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="Shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon" />
 
 <script type="text/javascript">
 /*
