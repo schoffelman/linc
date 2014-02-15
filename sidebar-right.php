@@ -12,7 +12,7 @@
 echo '<div class="sidebar">';
 
 // PUT THE LOOP HERE FOR FEATURED POSTS
-$featured_args = array( 'category__in' => 124 );
+$featured_args = array( 'category_name' => 'featured-items', 'posts_per_page' => '4' );
 
 // The Query
 $the_query = new WP_Query( $featured_args );
