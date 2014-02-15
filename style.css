@@ -150,9 +150,11 @@ body {
           color: #669932;
           text-decoration: none; }
       body header .main-navigation ul li:hover,
+      body header .main-navigation ul li.current-post-ancestor,
       body header .main-navigation ul li.current_page_item {
         background: transparent url(images/main-nav-hover.png) no-repeat 6px 50%; }
         body header .main-navigation ul li:hover a,
+        body header .main-navigation ul li.current-post-ancestor a,
         body header .main-navigation ul li.current_page_item a {
           color: #669932;
           cursor: pointer; }

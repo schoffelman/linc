@@ -158,9 +158,6 @@ body {
 			padding: 0;
 			.desktop {
 				display: block;
-				.current_page_item {
-
-				}
 			} 
 			.mobile {
 				display: none;
@@ -181,6 +178,7 @@ body {
 					}
 				}
 				li:hover,
+				li.current-post-ancestor,
 				li.current_page_item {
 					background: transparent url(images/main-nav-hover.png) no-repeat 6px 50%;
 					a {
