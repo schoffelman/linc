@@ -106,6 +106,17 @@ body.home {
 }
 
 body {
+	#lightbox-container-image-box {
+		z-index: 10;
+		#lightbox-container-image {
+			background: $white;
+			padding-bottom: 40px;
+		}
+	}
+	#lightbox-container-image-data-box {
+		position: relative;
+		z-index: 10;
+	}
 	color: $black;
 	header.navbar {
 		border: 0;

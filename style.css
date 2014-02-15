@@ -93,6 +93,14 @@ body.home {
 
 body {
   color: black; }
+  body #lightbox-container-image-box {
+    z-index: 10; }
+    body #lightbox-container-image-box #lightbox-container-image {
+      background: white;
+      padding-bottom: 40px; }
+  body #lightbox-container-image-data-box {
+    position: relative;
+    z-index: 10; }
   body header.navbar {
     border: 0;
     margin-bottom: 0; }
