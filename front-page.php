@@ -29,7 +29,7 @@ get_header(); ?>
 		 		?>
 			</div>
 	 		<div class="col-md-3 more-info">
-	 			<a href="#" title="#"><img src="<?php echo get_template_directory_uri(); ?>/images/request-more-info.png" alt="Request More Information" /></a>
+	 			<a href="<?php echo CONTACT_US; ?>" title="Request More Information"><img src="<?php echo get_template_directory_uri(); ?>/images/request-more-info.png" alt="Request More Information" /></a>
 	 		</div>
 	 	</div>
 	 	<div class="clear"></div>

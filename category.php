@@ -32,7 +32,7 @@ get_header(); ?>
 				<h1 class="page-title"><?php single_cat_title(); ?></h1>
 			</div>
 			<div class="col-md-3">
-				<a href="#" title="Request More Information" class="more-info"><img src="<?php echo get_template_directory_uri(); ?>/images/request-more-info.png" alt="Request More Information" /></a>
+				<a href="<?php echo CONTACT_US; ?>" title="Request More Information" class="more-info"><img src="<?php echo get_template_directory_uri(); ?>/images/request-more-info.png" alt="Request More Information" /></a>
 			</div>
 			<div class="col-md-12">
 				<hr />

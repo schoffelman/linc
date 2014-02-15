@@ -8,6 +8,7 @@
  * @subpackage Linc
  * @since Linc 1.0
  */
+define('CONTACT_US', '/contact-us');
 ?><!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>

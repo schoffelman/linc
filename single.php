@@ -36,7 +36,7 @@ get_header(); ?>
 				</h1>
 			</div>
 			<div class="col-md-3 more-info">
-				<a href="#" title="#"><img src="<?php echo get_template_directory_uri(); ?>/images/request-more-info.png" alt="Request More Information" /></a>
+				<a href="<?php echo CONTACT_US; ?>" title="Request More Information"><img src="<?php echo get_template_directory_uri(); ?>/images/request-more-info.png" alt="Request More Information" /></a>
 			</div>
 			<div class="col-md-12">
 				<hr />
@@ -63,7 +63,7 @@ get_header(); ?>
 
 						 ?></h3>
 						 <a href="tel:16053515387" title="Phone" class="phone-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/phone-icon.png" alt="phone" /></a>
-						 <a href="mailto:text@example.com" title="email" class="email-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/mail-icon.png" alt="email" /></a>
+						 <a href="/contact-us" title="contact" class="email-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/mail-icon.png" alt="contact" /></a>
 					</div>
 					<div class="details">
 						<?php the_content(); ?>
