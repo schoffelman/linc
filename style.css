@@ -91,213 +91,231 @@ body.home {
     body.home .content .featured-items .featured a.thumb:hover img {
       border-bottom: 5px solid #ff9933; }
 
-body header.navbar {
-  border: 0;
-  margin-bottom: 0; }
-body header {
-  background: transparent url(images/interior-bg.jpg) repeat-x 50% top;
-  height: 146px;
-  margin-top: -1px; }
-  body header .banner {
-    background: #003300 url(images/header-leaf.png) no-repeat;
-    background-position: calc(50% - 24em) 0;
-    border-bottom: 5px solid #669932;
-    height: 106px;
-    position: relative;
-    top: 40px;
-    white-space: nowrap; }
-  body header .container {
-    position: relative; }
-  body header h1.site-title,
-  body header h1.site-title a {
-    color: white;
-    font-family: hendobree_serifregular, Georgia, Times, serif;
-    font-size: 1.8em;
-    font-weight: 100;
-    left: .15em;
-    letter-spacing: .05em;
-    position: absolute;
-    text-transform: uppercase;
-    top: .1em; }
-  body header h1.site-title a:hover {
-    text-decoration: none; }
-  body header .main-navigation {
-    margin-top: 2.75em;
-    padding: 0; }
-    body header .main-navigation .desktop {
-      display: block; }
-    body header .main-navigation .mobile {
-      display: none; }
-    body header .main-navigation ul li {
-      display: inline-block;
-      padding-left: 2em; }
-      body header .main-navigation ul li a {
-        color: white;
-        font-family: hendobree_serifregular, Georgia, Times, serif;
-        font-size: 1.25em;
-        font-weight: 100; }
-      body header .main-navigation ul li a:hover {
-        color: #669932;
-        text-decoration: none; }
-    body header .main-navigation ul li:hover,
-    body header .main-navigation ul li.current_page_item {
-      background: transparent url(images/main-nav-hover.png) no-repeat 6px 50%; }
-      body header .main-navigation ul li:hover a,
-      body header .main-navigation ul li.current_page_item a {
-        color: #669932;
-        cursor: pointer; }
-body .jumbotron {
-  background: transparent url(images/home-bg.jpg) repeat-x bottom center;
-  min-height: 440px;
-  margin-bottom: 10px; }
-  body .jumbotron .home-banner {
-    height: 360px;
-    margin: 0 auto;
-    padding: 0 2px;
-    width: 940px; }
-  body .jumbotron .home-banner-bg {
-    height: 360px;
-    margin: 0 auto;
-    width: 940px; }
-    body .jumbotron .home-banner-bg .cycloneslider-caption-title {
-      font-family: hendobree_serifregular, Georgia, Times, serif; }
-body .breadcrumbs {
-  background: #666633;
-  color: #517928;
-  height: 40px;
-  padding-top: .65em; }
-  body .breadcrumbs a {
-    color: #ff9933; }
-  body .breadcrumbs span.div {
-    margin: 0 11px 0 14px;
-    color: #669932; }
-  body .breadcrumbs span {
-    color: #b4b476; }
-body .prev-page {
-  margin: 0 15px 0 0;
-  float: left; }
-body .link-page-title {
-  display: block;
-  padding-top: 3px; }
-body .home-content .entry {
-  margin-left: 0;
-  padding-left: 0; }
-  body .home-content .entry h1 {
-    color: white;
-    margin-bottom: 0.8em; }
-body .home-content .more-info {
-  padding-top: 2em; }
-body .main {
-  background: #cccc99 url(images/bg-grad.gif) repeat-x 0 0; }
-  body .main .content {
-    padding-bottom: 10em; }
-    body .main .content .more-info {
-      display: block;
-      margin: 35px 0 10px; }
-    body .main .content h1.page-title {
+body {
+  color: black; }
+  body header.navbar {
+    border: 0;
+    margin-bottom: 0; }
+  body header {
+    background: transparent url(images/interior-bg.jpg) repeat-x 50% top;
+    height: 146px;
+    margin-top: -1px; }
+    body header .banner {
+      background: #003300 url(images/header-leaf.png) no-repeat;
+      background-position: calc(50% - 24em) 0;
+      border-bottom: 5px solid #669932;
+      height: 106px;
+      position: relative;
+      top: 40px;
+      white-space: nowrap; }
+    body header .container {
+      position: relative; }
+    body header h1.site-title,
+    body header h1.site-title a {
       color: white;
       font-family: hendobree_serifregular, Georgia, Times, serif;
+      font-size: 1.8em;
       font-weight: 100;
-      margin-top: 30px; }
-      body .main .content h1.page-title a {
-        color: white; }
-    body .main .content .gallery dl.gallery-item {
-      min-width: 120px; }
-    body .main .content .gallery dt.gallery-icon img {
-      max-height: 120px;
-      max-width: 120px;
-      overflow: hidden; }
-    body .main .content .inventory-entry {
-      background: white;
-      padding: 20px; }
-      body .main .content .inventory-entry .price {
-        background: #f0f0e0;
-        margin: 0px;
-        padding: 25px 20px;
-        position: relative; }
-        body .main .content .inventory-entry .price h3 {
-          margin: 0;
-          padding: 0; }
-        body .main .content .inventory-entry .price .phone-icon {
-          position: absolute;
-          right: 85px;
-          top: 22px; }
-        body .main .content .inventory-entry .price .email-icon {
-          position: absolute;
-          right: 30px;
-          top: 22px; }
-    body .main .content .products {
-      min-height: 325px; }
-      body .main .content .products a.thumb {
-        display: block;
-        overflow: hidden; }
-        body .main .content .products a.thumb img {
-          border-bottom: 5px solid #517928;
-          height: 175px; }
-      body .main .content .products .price a {
-        color: #517928;
-        display: inline; }
-      body .main .content .products a:hover img {
-        border-bottom: 5px solid #ff9933; }
-      body .main .content .products h4 a {
-        color: black; }
-      body .main .content .products h4 a:hover {
-        color: black; }
-    body .main .content .rightsidebar {
-      padding-right: 0; }
-    body .main .content .sidebar h3 {
-      color: white;
-      font-family: hendobree_serifregular, Georgia, Times, serif; }
-    body .main .content .sidebar ul.featured {
-      list-style: none;
-      margin: 25px 0;
-      padding: 0 0; }
-      body .main .content .sidebar ul.featured li {
-        margin-bottom: 35px; }
-        body .main .content .sidebar ul.featured li img {
-          border-bottom: 5px solid #517928; }
-        body .main .content .sidebar ul.featured li a {
-          color: black; }
-        body .main .content .sidebar ul.featured li a:hover img {
-          border-bottom: 5px solid #ff9933; }
-    body .main .content ul.inventory {
-      border-top: 1px solid #a3a35d;
-      list-style: none;
-      margin: 2em 0 0;
+      left: .15em;
+      letter-spacing: .05em;
+      position: absolute;
+      text-transform: uppercase;
+      top: .1em; }
+    body header h1.site-title a:hover {
+      text-decoration: none; }
+    body header .main-navigation {
+      margin-top: 2.75em;
       padding: 0; }
-      body .main .content ul.inventory li {
-        border-bottom: 1px solid #a3a35d;
-        color: #003300;
-        font-family: hendobree_serifregular, Georgia, Times, serif;
-        font-size: 1.2em;
-        font-weight: 700;
-        margin: 0; }
-        body .main .content ul.inventory li a {
-          color: #003300;
-          display: inline-block;
-          font-weight: 700;
-          padding: .75em 1em; }
-      body .main .content ul.inventory li:hover {
-        background: #003300;
-        color: #ff9933;
-        cursor: pointer;
-        font-size: 1.2em;
-        font-weight: 700; }
-        body .main .content ul.inventory li:hover a {
-          color: #ff9933;
-          font-weight: 700;
+      body header .main-navigation .desktop {
+        display: block; }
+      body header .main-navigation .mobile {
+        display: none; }
+      body header .main-navigation ul li {
+        display: inline-block;
+        padding-left: 2em; }
+        body header .main-navigation ul li a {
+          color: white;
+          font-family: hendobree_serifregular, Georgia, Times, serif;
+          font-size: 1.25em;
+          font-weight: 100; }
+        body header .main-navigation ul li a:hover {
+          color: #669932;
           text-decoration: none; }
-body footer {
-  background: transparent url(images/footer-bg.png) repeat 0 0;
-  color: white;
-  min-height: 100px;
-  padding: 15px 0 100px; }
-  body footer .copyright {
-    float: left;
-    font-size: 1.1em;
-    font-weight: 300; }
-  body footer .bbb {
-    float: right; }
+      body header .main-navigation ul li:hover,
+      body header .main-navigation ul li.current_page_item {
+        background: transparent url(images/main-nav-hover.png) no-repeat 6px 50%; }
+        body header .main-navigation ul li:hover a,
+        body header .main-navigation ul li.current_page_item a {
+          color: #669932;
+          cursor: pointer; }
+  body .jumbotron {
+    background: transparent url(images/home-bg.jpg) repeat-x bottom center;
+    min-height: 440px;
+    margin-bottom: 10px; }
+    body .jumbotron .home-banner {
+      height: 360px;
+      margin: 0 auto;
+      padding: 0 2px;
+      width: 940px; }
+    body .jumbotron .home-banner-bg {
+      height: 360px;
+      margin: 0 auto;
+      width: 940px; }
+      body .jumbotron .home-banner-bg .cycloneslider-caption-title {
+        font-family: hendobree_serifregular, Georgia, Times, serif; }
+  body .breadcrumbs {
+    background: #666633;
+    color: #517928;
+    height: 40px;
+    padding-top: .65em; }
+    body .breadcrumbs a {
+      color: #ff9933; }
+    body .breadcrumbs span.div {
+      margin: 0 11px 0 14px;
+      color: #669932; }
+    body .breadcrumbs span {
+      color: #b4b476; }
+  body .prev-page {
+    margin: 0 15px 0 0;
+    float: left; }
+  body .link-page-title {
+    display: block;
+    padding-top: 3px; }
+  body .home-content .entry {
+    margin-left: 0;
+    padding-left: 0; }
+    body .home-content .entry h1 {
+      color: white;
+      margin-bottom: 0.8em; }
+  body .home-content .more-info {
+    padding-top: 2em; }
+  body .main {
+    background: #cccc99 url(images/bg-grad.gif) repeat-x 0 0; }
+    body .main .content {
+      padding-bottom: 10em; }
+      body .main .content .more-info {
+        display: block;
+        margin: 35px 0 10px; }
+      body .main .content .cform {
+        background: none;
+        border: 0;
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -khtml-border-radius: 0;
+        -webkit-border-radius: 0;
+        margin-top: 30px;
+        width: 100%; }
+        body .main .content .cform label {
+          color: black;
+          font-size: inherit;
+          font-weight: 300; }
+      body .main .content .linklove {
+        position: absolute;
+        left: -9999em; }
+      body .main .content h1.page-title {
+        color: white;
+        font-family: hendobree_serifregular, Georgia, Times, serif;
+        font-weight: 100;
+        margin-top: 30px; }
+        body .main .content h1.page-title a {
+          color: white; }
+      body .main .content .gallery dl.gallery-item {
+        min-width: 120px; }
+      body .main .content .gallery dt.gallery-icon img {
+        max-height: 120px;
+        max-width: 120px;
+        overflow: hidden; }
+      body .main .content .inventory-entry {
+        background: white;
+        padding: 20px; }
+        body .main .content .inventory-entry .price {
+          background: #f0f0e0;
+          margin: 0px;
+          padding: 25px 20px;
+          position: relative; }
+          body .main .content .inventory-entry .price h3 {
+            margin: 0;
+            padding: 0; }
+          body .main .content .inventory-entry .price .phone-icon {
+            position: absolute;
+            right: 85px;
+            top: 22px; }
+          body .main .content .inventory-entry .price .email-icon {
+            position: absolute;
+            right: 30px;
+            top: 22px; }
+      body .main .content .products {
+        min-height: 325px; }
+        body .main .content .products a.thumb {
+          display: block;
+          overflow: hidden; }
+          body .main .content .products a.thumb img {
+            border-bottom: 5px solid #517928;
+            height: 175px; }
+        body .main .content .products .price a {
+          color: #517928;
+          display: inline; }
+        body .main .content .products a:hover img {
+          border-bottom: 5px solid #ff9933; }
+        body .main .content .products h4 a {
+          color: black; }
+        body .main .content .products h4 a:hover {
+          color: black; }
+      body .main .content .rightsidebar {
+        padding-right: 0; }
+      body .main .content .sidebar h3 {
+        color: white;
+        font-family: hendobree_serifregular, Georgia, Times, serif; }
+      body .main .content .sidebar ul.featured {
+        list-style: none;
+        margin: 25px 0;
+        padding: 0 0; }
+        body .main .content .sidebar ul.featured li {
+          margin-bottom: 35px; }
+          body .main .content .sidebar ul.featured li img {
+            border-bottom: 5px solid #517928; }
+          body .main .content .sidebar ul.featured li a {
+            color: black; }
+          body .main .content .sidebar ul.featured li a:hover img {
+            border-bottom: 5px solid #ff9933; }
+      body .main .content ul.inventory {
+        border-top: 1px solid #a3a35d;
+        list-style: none;
+        margin: 2em 0 0;
+        padding: 0; }
+        body .main .content ul.inventory li {
+          border-bottom: 1px solid #a3a35d;
+          color: #003300;
+          font-family: hendobree_serifregular, Georgia, Times, serif;
+          font-size: 1.2em;
+          font-weight: 700;
+          margin: 0; }
+          body .main .content ul.inventory li a {
+            color: #003300;
+            display: inline-block;
+            font-weight: 700;
+            padding: .75em 1em; }
+        body .main .content ul.inventory li:hover {
+          background: #003300;
+          color: #ff9933;
+          cursor: pointer;
+          font-size: 1.2em;
+          font-weight: 700; }
+          body .main .content ul.inventory li:hover a {
+            color: #ff9933;
+            font-weight: 700;
+            text-decoration: none; }
+  body footer {
+    background: transparent url(images/footer-bg.png) repeat 0 0;
+    color: white;
+    min-height: 100px;
+    padding: 15px 0 100px; }
+    body footer .copyright {
+      float: left;
+      font-size: 1.1em;
+      font-weight: 300; }
+    body footer .bbb {
+      float: right; }
 
 @media all and (max-width: 991px) {
   body .container {

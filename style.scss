@@ -106,6 +106,7 @@ body.home {
 }
 
 body {
+	color: $black;
 	header.navbar {
 		border: 0;
 		margin-bottom:0;
@@ -242,6 +243,25 @@ body {
 			.more-info {
 				display: block;
 				margin: 35px 0 10px;
+			}
+			.cform {
+				background: none;
+				border: 0;
+				border-radius: 0;
+				-moz-border-radius: 0;
+				-khtml-border-radius: 0;
+				-webkit-border-radius: 0;
+				margin-top: 30px;
+				width: 100%;
+				label {
+					color: $black;
+					font-size: inherit;
+					font-weight: 300;
+				}
+			}
+			.linklove {
+				position: absolute;
+				left: -9999em;
 			}
 			h1.page-title {
 				color: $white;
