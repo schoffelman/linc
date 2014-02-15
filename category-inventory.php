@@ -43,9 +43,10 @@ get_header(); ?>
 				</div>
 				<ul class="inventory">
 					<?php 
+						$cat_id = get_category_by_slug('inventory');
 						$args = array(
 							'show_count' => 1,
-							'child_of' => 120,
+							'child_of' => $cat_id->term_id,
 							'depth' => 1,
 							'title_li' => ''
 						);
