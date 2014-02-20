@@ -229,12 +229,25 @@ body {
         margin-top: 30px; }
         body .main .content h1.page-title a {
           color: white; }
+      body .main .content .gallery img,
+      body .main .content .gallery img.attachment-post-thumbnail {
+        border: none; }
+      body .main .content .gallery img.attachment-post-thumbnail {
+        margin-left: 2px;
+        max-width: 360px; }
       body .main .content .gallery dl.gallery-item {
-        min-width: 120px; }
+        margin-bottom: 0px;
+        min-width: 110px; }
       body .main .content .gallery dt.gallery-icon img {
-        max-height: 120px;
-        max-width: 120px;
+        border: none !important;
+        max-height: 110px;
+        max-width: 110px;
         overflow: hidden; }
+      body .main .content .gallery dt.gallery-icon a {
+        display: block;
+        border: 5px solid transparent; }
+      body .main .content .gallery dt.gallery-icon a:hover {
+        border: 5px solid #ff9933; }
       body .main .content .inventory-entry {
         background: white;
         padding: 20px; }
@@ -254,6 +267,29 @@ body {
             position: absolute;
             right: 30px;
             top: 22px; }
+        body .main .content .inventory-entry .details {
+          margin: 25px 0 65px; }
+          body .main .content .inventory-entry .details ul {
+            margin: 25px 0; }
+          body .main .content .inventory-entry .details ul li span,
+          body .main .content .inventory-entry .details span.lable {
+            font-weight: 700;
+            text-transform: capitalize; }
+          body .main .content .inventory-entry .details table {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            display: block;
+            line-height: 1.428571429;
+            margin: 0 0 0;
+            padding: 20px 5px;
+            width: 70%; }
+            body .main .content .inventory-entry .details table tr {
+              display: block;
+              padding: 5px 5px 0 5px; }
+            body .main .content .inventory-entry .details table td, body .main .content .inventory-entry .details table th {
+              padding: 0 40px 0 10px; }
       body .main .content .products {
         min-height: 325px; }
         body .main .content .products a.thumb {

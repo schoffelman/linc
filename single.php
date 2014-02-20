@@ -47,7 +47,8 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 				<div class="col-md-5 gallery">
-					<?php the_post_thumbnail(); ?>
+						<?php the_post_thumbnail(); ?>
+						<?php echo do_shortcode(' [gallery exclude="' . get_post_thumbnail_id( $post->ID ) . '"] '); ?>
 	 			</div>
 	 			<div class="col-md-7 inventory-entry">
  				
@@ -66,7 +67,46 @@ get_header(); ?>
 						 <a href="/contact-us" title="contact" class="email-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/mail-icon.png" alt="contact" /></a>
 					</div>
 					<div class="details">
-						<?php the_content(); ?>
+						<?php the_excerpt(); ?>
+						<div class="inventory_details">
+							<?php 
+								$inventory_details = Array(
+									'alternative price' => get_post_meta( $post->ID, 'wpcf-alternative-price', true ),
+									'manufacturers' => get_post_meta( $post->ID, 'wpcf-manufacturers', true ),
+									'model' => get_post_meta( $post->ID, 'wpcf-model', true ),
+									'price' => get_post_meta( $post->ID, 'wpcf-price', true ),
+									'specification' => get_post_meta( $post->ID, 'wpcf-specification', true ),
+									'year' => get_post_meta( $post->ID, 'wpcf-year', true ) ); 
+								// echo "<pre>"; print_r($inventory_details); echo "</pre>";
+								if (!empty($inventory_details)) {
+									echo "<ul>";
+									if (!empty($inventory_details['alternative price'])) {
+										echo '<li><span>alternative price</span>: ' .  $inventory_details['alternative price'] . '</li>';
+									}
+									if (!empty($inventory_details['manufacturers'])) {
+										echo '<li><span>manufacturers</span>: ' .  $inventory_details['manufacturers'] . '</li>';
+									}
+									if (!empty($inventory_details['model'])) {
+										echo '<li><span>model</span>: ' .  $inventory_details['model'] . '</li>';
+									}
+									if (!empty($inventory_details['price'])) {
+										echo '<li><span>price</span>: ' .  $inventory_details['price'] . '</li>';
+									}
+									if (!empty($inventory_details['year'])) {
+										echo '<li><span>year</span>: ' .  $inventory_details['year'] . '</li>';
+									}
+									echo "</ul>";
+									if (!empty($inventory_details['specification'])) {
+										if ($key =="specification") {
+											echo '<span class="lable">specifications</span>: ';
+										} else {
+											echo '';
+										}
+										echo  $inventory_details['specification'];
+									}
+								}
+							 ?>
+						</div>
 					</div>
 
 	 			<div>
