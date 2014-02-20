@@ -281,6 +281,14 @@ body {
 					color: $white;
 				}
 			}
+			.entry {
+				margin-bottom: 40px;
+				h2,
+				h2 a,
+				h2 a:hover {
+					color: $white;
+				}
+			}
 			.gallery {
 				img,
 				img.attachment-post-thumbnail {

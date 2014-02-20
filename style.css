@@ -229,6 +229,12 @@ body {
         margin-top: 30px; }
         body .main .content h1.page-title a {
           color: white; }
+      body .main .content .entry {
+        margin-bottom: 40px; }
+        body .main .content .entry h2,
+        body .main .content .entry h2 a,
+        body .main .content .entry h2 a:hover {
+          color: white; }
       body .main .content .gallery img,
       body .main .content .gallery img.attachment-post-thumbnail {
         border: none; }
