@@ -29,9 +29,9 @@ get_header(); ?>
 			<div class="col-md-9">
 				<h1 class="page-title"><a href="/" title="Oops, Page Not Found">Oops, Page Not Found</a></h1>
 			</div>
-			<div class="col-md-3 more-info">
-				<a href="<?php echo CONTACT_US; ?>" title="Request More Information"><img src="<?php echo get_template_directory_uri(); ?>/images/request-more-info.png" alt="Request More Information" /></a>
-			</div>
+	 		<div class="col-md-5 search-form">
+	 			<?php get_search_form(); ?>
+	 		</div>
 			<div class="col-md-12">
 				<hr />
 			</div>
