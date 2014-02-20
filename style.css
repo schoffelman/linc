@@ -199,6 +199,13 @@ body {
       margin-bottom: 0.8em; }
   body .home-content .more-info {
     padding-top: 2em; }
+  body .home-content .search-form {
+    padding-top: 2em;
+    text-align: right;
+    color: white; }
+  body .searchform label {
+    color: white;
+    font-size: 18px; }
   body .main {
     background: #cccc99 url(images/bg-grad.gif) repeat-x 0 0; }
     body .main .content {
@@ -206,6 +213,10 @@ body {
       body .main .content .more-info {
         display: block;
         margin: 35px 0 10px; }
+      body .main .content .search-form {
+        margin: 35px 0 10px;
+        text-align: right;
+        color: white; }
       body .main .content .cform {
         background: none;
         border: 0;

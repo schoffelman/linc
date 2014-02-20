@@ -244,6 +244,15 @@ body {
 		.more-info {
 			padding-top: 2em;
 		}
+		.search-form {
+			padding-top: 2em;
+			text-align: right;
+			color: $white;
+		}
+	}
+	.searchform label {
+		color: $white;
+		font-size: 18px;
 	}
 	.main {
 		background: $tan url(images/bg-grad.gif) repeat-x 0 0;
@@ -252,6 +261,11 @@ body {
 			.more-info {
 				display: block;
 				margin: 35px 0 10px;
+			}
+			.search-form {
+				margin: 35px 0 10px;
+				text-align: right;
+				color: $white;
 			}
 			.cform {
 				background: none;

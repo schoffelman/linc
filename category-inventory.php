@@ -28,12 +28,12 @@ get_header(); ?>
 <div id="main" class="main wrapper">
 	<div id="primary" class="content container">
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-md-7">
 				<h1 class="page-title"><?php single_cat_title(); ?></h1>
 			</div>
-			<div class="col-md-3">
-				<a href="<?php echo CONTACT_US; ?>" title="Request More Information" class="more-info"><img src="<?php echo get_template_directory_uri(); ?>/images/request-more-info.png" alt="Request More Information" /></a>
-			</div>
+	 		<div class="col-md-5 search-form">
+	 			<?php get_search_form(); ?>
+	 		</div>
 			<div class="col-md-12">
 				<hr />
 			</div>

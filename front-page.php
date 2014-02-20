@@ -20,7 +20,7 @@ get_header(); ?>
 	</div><!-- #jumbotron -->
 	<div id="primary" class="content container">
 		<div class="home-content">
-			<div class="col-md-9 entry">
+			<div class="col-md-7 entry">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<?php the_content(); ?>
 				<?php endwhile;	endif;
@@ -28,8 +28,8 @@ get_header(); ?>
 					wp_reset_postdata();
 		 		?>
 			</div>
-	 		<div class="col-md-3 more-info">
-	 			<a href="<?php echo CONTACT_US; ?>" title="Request More Information"><img src="<?php echo get_template_directory_uri(); ?>/images/request-more-info.png" alt="Request More Information" /></a>
+	 		<div class="col-md-5 search-form">
+	 			<?php get_search_form(); ?>
 	 		</div>
 	 	</div>
 	 	<div class="clear"></div>
