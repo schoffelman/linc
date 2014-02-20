@@ -26,7 +26,7 @@ get_header(); ?>
 <div id="main" class="main wrapper">
 	<div id="primary" class="content container">
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-md-7">
 				<h1 class="page-title"><a href="/" title="Oops, Page Not Found">Oops, Page Not Found</a></h1>
 			</div>
 	 		<div class="col-md-5 search-form">
