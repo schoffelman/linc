@@ -80,9 +80,13 @@ get_header(); ?>
 				} else { 
 
 					// list the parameters for the query
-					$product_args = array( 'posts_per_page' => 12 );
+					$product_args = array( 
+						'posts_per_page' => 12,
+						'cat' => $term->term_id
+					);
 
 					$product_listing = new WP_Query( $product_args );
+					// echo "<pre>"; print_r($product_listing); echo "</pre>";
 
 
 					// The Loop
