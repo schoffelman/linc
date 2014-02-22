@@ -20,7 +20,7 @@ get_header(); ?>
 	</div><!-- #jumbotron -->
 	<div id="primary" class="content container">
 		<div class="home-content">
-			<div class="col-md-7 entry">
+			<div class="col-md-9 entry">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<?php the_content(); ?>
 				<?php endwhile;	endif;
@@ -28,7 +28,7 @@ get_header(); ?>
 					wp_reset_postdata();
 		 		?>
 			</div>
-	 		<div class="col-md-5 search-form">
+	 		<div class="col-md-3 search-form">
 	 			<?php get_search_form(); ?>
 	 		</div>
 	 	</div>
