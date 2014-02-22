@@ -11,6 +11,8 @@
 
 echo '<div class="sidebar">';
 
+dynamic_sidebar( 'top-right-sidebar' ); 
+
 // PUT THE LOOP HERE FOR FEATURED POSTS
 $featured_args = array( 'category_name' => 'featured-items', 'posts_per_page' => '4' );
 
@@ -54,6 +56,6 @@ if ( $the_query->have_posts() ) {
 /* Restore original Post Data */
 wp_reset_postdata();
 
-dynamic_sidebar( 'right-sidebar' ); 
+dynamic_sidebar( 'bottom-right-sidebar' ); 
 
 echo '</div>';

@@ -32,13 +32,24 @@ if (function_exists('register_nav_menus')){
 
 // Register the right sidebar for the interior pages
 register_sidebar(array(
-	'name' => 'Right Sidebar',
-	'id' => 'right-sidebar',
-	'before_widget' => '<li>',
-	'after_widget' => "</li>",
-	'before_title' => "<h3>",
-	'after_title' => "</h3>",
-    'description' => 'This sidebar is only for interior pages'
+    'name' => 'Top Right Sidebar',
+    'id' => 'top-right-sidebar',
+    'before_widget' => '<div class="widget">',
+    'after_widget' => "</div>",
+    'before_title' => "<h3>",
+    'after_title' => "</h3>",
+    'description' => 'This is the top right sidebar for all interior pages'
+ ));
+
+// Register the right sidebar for the interior pages
+register_sidebar(array(
+    'name' => 'Bottom Right Sidebar',
+    'id' => 'bottom-right-sidebar',
+    'before_widget' => '<div class="widget">',
+    'after_widget' => "</div>",
+    'before_title' => "<h3>",
+    'after_title' => "</h3>",
+    'description' => 'This is the bottom right sidebar for all interior pages'
  ));
 
 
