@@ -64,7 +64,7 @@ get_header(); ?>
 
 						 ?></h3>
 						 <a href="tel:16053515387" title="Phone" class="phone-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/phone-icon.png" alt="phone" /></a>
-						 <a href="/contact-us" title="contact" class="email-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/mail-icon.png" alt="contact" /></a>
+						 <a href="<?php echo CONTACT_US; ?>" title="contact" class="email-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/mail-icon.png" alt="contact" /></a>
 					</div>
 					<div class="details">
 						<?php the_excerpt(); ?>
