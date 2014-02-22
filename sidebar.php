@@ -9,10 +9,3 @@
  * @since Linc 1.0
  */
 
-
-
-
-echo '<div class="sidebar">';
-
-
-echo '</div>';

@@ -28,10 +28,10 @@ get_header(); ?>
 <div id="main" class="main wrapper">
 	<div id="primary" class="content container">
 		<div class="row">
-			<div class="col-md-7">
+			<div class="col-md-9">
 				<h1 class="page-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 			</div>
-	 		<div class="col-md-5 search-form">
+	 		<div class="col-md-3 search-form">
 	 			<?php get_search_form(); ?>
 	 		</div>
 			<div class="col-md-12">
@@ -55,7 +55,7 @@ get_header(); ?>
  			</div>
  			<div class="col-md-3">
  				<?php get_sidebar( 'right' ); ?>
- 			<div>
+ 			</div>
 		</div>
 	</div>
 </div>

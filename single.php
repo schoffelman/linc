@@ -109,7 +109,7 @@ get_header(); ?>
 						</div>
 					</div>
 
-	 			<div>
+	 			</div>
 				<?php endwhile;
 				endif;
 				/* Restore original Post Data */
