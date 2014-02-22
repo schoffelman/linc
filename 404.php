@@ -44,7 +44,7 @@ get_header(); ?>
  			</div>
  			<div class="col-md-3">
  				<?php get_sidebar( 'right' ); ?>
- 			<div>
+ 			</div>
 		</div>
 	</div>
 </div>
