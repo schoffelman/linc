@@ -156,10 +156,10 @@ body {
 		.main-navigation {
 			margin-top: 2.75em;
 			padding: 0;
-			.nav-menu {
+			.desktop {
 				display: block;
 			} 
-			.selectnav {
+			.mobile {
 				display: none;
 			}
 			ul {
@@ -557,10 +557,10 @@ body {
 			.main-navigation {
 				margin-top: 4.5em;
 				margin-left: .75em;
-				.nav-menu {
+				.desktop {
 					display: none;
 				}
-				.selectnav {
+				.mobile {
 					label {
 						color: $white;
 						margin-right: 10px;

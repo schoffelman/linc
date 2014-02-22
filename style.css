@@ -134,9 +134,9 @@ body {
     body header .main-navigation {
       margin-top: 2.75em;
       padding: 0; }
-      body header .main-navigation .nav-menu {
+      body header .main-navigation .desktop {
         display: block; }
-      body header .main-navigation .selectnav {
+      body header .main-navigation .mobile {
         display: none; }
       body header .main-navigation ul li {
         display: inline-block;
@@ -419,11 +419,11 @@ body {
   body header .main-navigation {
     margin-top: 4.5em;
     margin-left: .75em; }
-    body header .main-navigation .nav-menu {
+    body header .main-navigation .desktop {
       display: none; }
-    body header .main-navigation .selectnav {
+    body header .main-navigation .mobile {
       display: block; }
-      body header .main-navigation .selectnav label {
+      body header .main-navigation .mobile label {
         color: white;
         margin-right: 10px; }
   body .jumbotron .home-banner-bg {
