@@ -431,7 +431,11 @@ body {
   body .home-content .search-form {
     margin: 25px 0 30px;
     padding: 0;
-    text-align: left; } }
+    text-align: left; }
+  body .entry img {
+    border: 0 none;
+    max-width: 100%;
+    vertical-align: middle; } }
 @media (max-width: 680px) {
   body.home .content .featured-items .featured {
     min-height: 250px; }
