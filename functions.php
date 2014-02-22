@@ -98,11 +98,7 @@ function dropdown_menu_scripts() {
     ?>
         <script>
           jQuery(document).ready(function ($) {
-            /* $("#drop-nav").change( function() {
-                    document.location.href =  $(this).val();
-            }); */
             $("select#drop-nav").change(function() {
-                document.location.href =  $(this).val();
                 window.location = $(this).find("option:selected").val();
             });
           });

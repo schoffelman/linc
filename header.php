@@ -36,7 +36,6 @@ define('CONTACT_US', '/contact-us');
 <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.min.js" type="text/javascript"></script>
 <![endif]-->
 <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/selectnav/selectnav.min.js" type="text/javascript"></script>
 
 <!-- start styles -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
@@ -57,11 +56,7 @@ define('CONTACT_US', '/contact-us');
     })();
 */
 </script>
-<script type="text/javascript">
-$(document).ready(function ($) {
-	selectnav('menu-main-navigation'); 
-});
-</script>
+
 
 <?php wp_head(); ?>
 </head>
@@ -76,9 +71,15 @@ $(document).ready(function ($) {
 				</hgroup>
 
 				<nav id="site-navigation" class="col-md-8 main-navigation" role="navigation">
-					<div><?php wp_nav_menu( 
-											array( 	'theme_location' => 'main-navigation', 
-													'menu_class'	 => 'nav-menu' ) ); 
+					<div class="desktop"><?php wp_nav_menu( 
+														array( 	'theme_location' => 'main-navigation', 
+																'menu_class'	 => 'nav-menu' ) ); 
+					?></div>
+					<div class="mobile"><?php wp_nav_menu( 
+														array(  'theme_location' => 'main-navigation', 
+																'menu_class'	 => 'mobile-nav-menu',
+														        'items_wrap'     => '<label for="drop-nav">Navigate: </label><select id="drop-nav"><option value="">Select a page...</option>%3$s</select>',
+														        'walker' 		 => new Nav_Menu_Dropdown()));
 					?></div>
 				</nav><!-- #site-navigation -->
 
