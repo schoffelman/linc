@@ -20,7 +20,7 @@ get_header(); ?>
 	</div><!-- #jumbotron -->
 	<div id="primary" class="content container">
 		<div class="home-content">
-			<div class="col-md-9 entry">
+			<div class="col-md-9 col-sm-8 entry">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<?php the_content(); ?>
 				<?php endwhile;	endif;
@@ -28,7 +28,7 @@ get_header(); ?>
 					wp_reset_postdata();
 		 		?>
 			</div>
-	 		<div class="col-md-3 search-form">
+	 		<div class="col-md-3 col-sm-4 search-form">
 	 			<?php get_search_form(); ?>
 	 		</div>
 	 	</div>
@@ -43,7 +43,7 @@ get_header(); ?>
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post(); ?>
 
-					<div class="col-md-3 featured">							
+					<div class="col-sm-6 col-md-3 featured">							
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="thumb">
 							<?php if ( has_post_thumbnail() ) {
 								the_post_thumbnail(array(210, 175));

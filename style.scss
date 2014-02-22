@@ -197,7 +197,7 @@ body {
 			height: 360px;
 			margin: 0 auto;
 			padding: 0 2px;
-			width: 940px;
+			max-width: 940px;
 		}
 		.home-banner-bg {
 			height: 360px;
@@ -561,6 +561,10 @@ body {
 					display: none;
 				}
 				.mobile {
+					label {
+						color: $white;
+						margin-right: 10px;
+					}
 					display: block;
 				}
 			}
@@ -572,7 +576,7 @@ body {
 		}
 		.home-content {
 			.search-form {
-				margin: 10px 0 30px;
+				margin: 25px 0 30px;
 				padding: 0;
 				text-align: left;
 			}

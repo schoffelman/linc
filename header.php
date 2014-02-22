@@ -78,7 +78,7 @@ define('CONTACT_US', '/contact-us');
 					<div class="mobile"><?php wp_nav_menu( 
 														array(  'theme_location' => 'main-navigation', 
 																'menu_class'	 => 'mobile-nav-menu',
-														        'items_wrap'     => '<select id="drop-nav"><option value="">Select a page...</option>%3$s</select>',
+														        'items_wrap'     => '<label for="drop-nav">Navigate: </label><select id="drop-nav"><option value="">Select a page...</option>%3$s</select>',
 														        'walker' 		 => new Nav_Menu_Dropdown()));
 					?></div>
 				</nav><!-- #site-navigation -->

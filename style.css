@@ -166,7 +166,7 @@ body {
       height: 360px;
       margin: 0 auto;
       padding: 0 2px;
-      width: 940px; }
+      max-width: 940px; }
     body .jumbotron .home-banner-bg {
       height: 360px;
       margin: 0 auto;
@@ -423,10 +423,13 @@ body {
       display: none; }
     body header .main-navigation .mobile {
       display: block; }
+      body header .main-navigation .mobile label {
+        color: white;
+        margin-right: 10px; }
   body .jumbotron .home-banner-bg {
     width: 100%; }
   body .home-content .search-form {
-    margin: 10px 0 30px;
+    margin: 25px 0 30px;
     padding: 0;
     text-align: left; } }
 @media (max-width: 680px) {
