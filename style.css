@@ -201,8 +201,17 @@ body {
     padding-top: 2em; }
   body .home-content .search-form {
     padding-top: 2em;
+    padding-right: 0;
     text-align: right;
     color: white; }
+    body .home-content .search-form form.search input {
+      padding: 5px 10px; }
+    body .home-content .search-form form.search input[type="text"] {
+      width: 138px; }
+    body .home-content .search-form form.search input#searchsubmit {
+      padding: 6px 10px 5px;
+      border: 1px inset;
+      background: white; }
   body .searchform label {
     color: white;
     font-size: 18px; }
@@ -217,6 +226,14 @@ body {
         margin: 35px 0 10px;
         text-align: right;
         color: white; }
+        body .main .content .search-form form.search input {
+          padding: 5px 10px; }
+        body .main .content .search-form form.search input[type="text"] {
+          width: 138px; }
+        body .main .content .search-form form.search input#searchsubmit {
+          padding: 6px 10px 5px;
+          border: 1px inset;
+          background: white; }
       body .main .content .cform {
         background: none;
         border: 0;
@@ -336,11 +353,21 @@ body {
         body .main .content .sidebar ul.featured li {
           margin-bottom: 35px; }
           body .main .content .sidebar ul.featured li img {
-            border-bottom: 5px solid #517928; }
+            border-bottom: 5px solid #517928;
+            max-width: 210px; }
           body .main .content .sidebar ul.featured li a {
             color: black; }
           body .main .content .sidebar ul.featured li a:hover img {
             border-bottom: 5px solid #ff9933; }
+      body .main .content .sidebar .widget {
+        padding: 10px 0; }
+        body .main .content .sidebar .widget h3 {
+          float: left;
+          font-size: 1.6em;
+          font-weight: 500;
+          margin: 3px 0 0; }
+        body .main .content .sidebar .widget a img {
+          margin-left: 10px; }
       body .main .content ul.inventory {
         border-top: 1px solid #a3a35d;
         list-style: none;
@@ -381,6 +408,9 @@ body {
       float: right; }
 
 @media all and (max-width: 991px) {
+  body.home .content .featured-items .featured {
+    min-height: 275px; }
+
   body .container {
     width: 100%; }
   body header h1.site-title,
@@ -394,7 +424,11 @@ body {
     body header .main-navigation .mobile {
       display: block; }
   body .jumbotron .home-banner-bg {
-    width: 100%; } }
+    width: 100%; }
+  body .home-content .search-form {
+    margin: 10px 0 30px;
+    padding: 0;
+    text-align: left; } }
 @media (max-width: 680px) {
   body.home .content .featured-items .featured {
     min-height: 250px; }
