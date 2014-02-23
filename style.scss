@@ -211,8 +211,8 @@ body {
 	.breadcrumbs {
 		background: $greentan;
 		color: $greengrass;
-		height: 40px;
-		padding-top: .65em;
+		min-height: 40px;
+		padding: 10px 0 10px 25px;
 		a {
 			color: $orange;
 		}
@@ -553,10 +553,10 @@ body {
 			h1.site-title, 
 			h1.site-title a {
 				top: -0.15em;
+				left: 0;
 			}
 			.main-navigation {
 				margin-top: 4.5em;
-				margin-left: .75em;
 				.desktop {
 					display: none;
 				}
@@ -588,6 +588,12 @@ body {
 			     vertical-align: middle;
 			}
 		}
+		.gallery {
+			margin-bottom: 20px;
+			dt.gallery-icon a {
+				float: left;
+			}
+		}
 	}
 }
 // body.home .content .featured-items .featured
@@ -598,13 +604,6 @@ body {
 		}
 	}
 	body {
-		header.navbar{
-			margin-bottom: 20px;
-		}
-						
-		.jumbotron{
-			// display: none;
-		}
 	}
 }
 

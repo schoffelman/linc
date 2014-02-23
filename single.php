@@ -13,15 +13,17 @@ get_header(); ?>
 <div class="breadcrumbs">
 	<div class="container">
 		<div class="row">
-			<?php 
-				if(function_exists('bcn_display')) { 
-					echo '<a href="/" title="Home" class="home">Home</a><span class="div">|</span><span class="current">'; 
-					bcn_display(); 
-					echo "</span>";
-				} else { 
-					echo "Home"; 
-				} 
-			?>
+			<div class="links">
+				<?php 
+					if(function_exists('bcn_display')) { 
+						echo '<a href="/" title="Home" class="home">Home</a><span class="div">|</span><span class="current">'; 
+						bcn_display(); 
+						echo "</span>";
+					} else { 
+						echo "Home"; 
+					} 
+				?>
+			</div>
 		</div>
 	</div>
 </div>
