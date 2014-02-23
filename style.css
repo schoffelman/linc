@@ -441,4 +441,7 @@ body {
       float: left; } }
 @media (max-width: 680px) {
   body.home .content .featured-items .featured {
-    min-height: 250px; } }
+    min-height: 250px; }
+
+  body .breadcrumbs {
+    padding-left: 15px; } }
