@@ -70,9 +70,9 @@ get_header(); ?>
 						<?php the_excerpt(); ?>
 						<div class="inventory_details">
 							<?php 
+								$manufacturers = types_render_field('manufacturers', array('output' => 'normal'));
 								$inventory_details = Array(
 									'alternative price' => get_post_meta( $post->ID, 'wpcf-alternative-price', true ),
-									'manufacturers' => get_post_meta( $post->ID, 'wpcf-manufacturers', true ),
 									'model' => get_post_meta( $post->ID, 'wpcf-model', true ),
 									'price' => get_post_meta( $post->ID, 'wpcf-price', true ),
 									'specification' => get_post_meta( $post->ID, 'wpcf-specification', true ),
@@ -83,8 +83,8 @@ get_header(); ?>
 									if (!empty($inventory_details['alternative price'])) {
 										echo '<li><span>alternative price</span>: ' .  $inventory_details['alternative price'] . '</li>';
 									}
-									if (!empty($inventory_details['manufacturers'])) {
-										echo '<li><span>manufacturers</span>: ' .  $inventory_details['manufacturers'] . '</li>';
+									if (!empty($manufacturers)) {
+										echo '<li><span>manufacturers</span>: ' .  $manufacturers . '</li>';
 									}
 									if (!empty($inventory_details['model'])) {
 										echo '<li><span>model</span>: ' .  $inventory_details['model'] . '</li>';
