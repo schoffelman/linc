@@ -19,19 +19,6 @@ foreach($query_args as $key => $string) {
 $search = new WP_Query($search_query);
 
 ?>
-<div class="breadcrumbs">
-	<div class="container">
-		<div class="row">
-			<?php 
-				if(function_exists('bcn_display')) { 
-					echo '<a href="/" title="Home" class="home">Home</a><span class="div">|</span><span class="current">Page Not Found</span>';
-				} else { 
-					echo "Home"; 
-				} 
-			?>
-		</div>
-	</div>
-</div>
 <div id="main" class="main wrapper">
 	<div id="primary" class="content container">
 		<div class="row">

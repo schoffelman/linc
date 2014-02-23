@@ -88,3 +88,22 @@ define('CONTACT_US', '/contact-us');
 		</div>
 
 	</header><!-- #masthead -->
+	<?php if(!is_home() && !is_front_page()) { ?>
+		<div class="breadcrumbs">
+			<div class="container">
+				<div class="row">
+					<div class="links">
+						<?php 
+							if(function_exists('bcn_display')) { 
+								echo '<a href="/" title="Home" class="home">Home</a><span class="div">|</span><span class="current">'; 
+								bcn_display(); 
+								echo "</span>";
+							} else { 
+								echo "Home"; 
+							} 
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
