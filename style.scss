@@ -531,6 +531,14 @@ body {
 			font-size: 1.1em;
 			font-weight: 300;
 		}
+		a {
+			color: $white;
+			text-decoration: underline;
+		}
+		a:hover {
+			color: $white;
+			text-decoration: none;
+		}
 		.bbb {
 			float: right;
 		}

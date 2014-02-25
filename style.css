@@ -403,6 +403,12 @@ body {
       float: left;
       font-size: 1.1em;
       font-weight: 300; }
+    body footer a {
+      color: white;
+      text-decoration: underline; }
+    body footer a:hover {
+      color: white;
+      text-decoration: none; }
     body footer .bbb {
       float: right; }
 
