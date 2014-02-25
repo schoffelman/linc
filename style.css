@@ -207,11 +207,55 @@ body {
     body .home-content .search-form form.search input {
       padding: 5px 10px; }
     body .home-content .search-form form.search input[type="text"] {
+      font-size: 13px;
+      font-style: italic;
+      height: 34px;
+      padding: 3px 2px 1px 10px;
       width: 138px; }
     body .home-content .search-form form.search input#searchsubmit {
-      padding: 6px 10px 5px;
-      border: 1px inset;
-      background: white; }
+      padding: 6px 10px 7px;
+      border: 1px solid #aaa;
+      border-radius: 2px;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f7f7f7), color-stop(100%, #c1c1c1));
+      background: -webkit-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+      background: -moz-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+      background: -o-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+      background: -ms-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+      background: linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#c1c1c1',GradientType=0 ); }
+    body .home-content .search-form form.search input#searchsubmit:hover {
+      padding: 6px 10px 7px;
+      border: 1px solid #c1c1c1;
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -khtml-border-radius: 3px; }
+  body form.search input {
+    padding: 5px 10px; }
+  body form.search input[type="text"] {
+    font-size: 13px;
+    font-style: italic;
+    height: 34px;
+    padding: 3px 2px 1px 10px;
+    width: 138px; }
+  body form.search input#searchsubmit {
+    padding: 6px 10px 7px;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f7f7f7), color-stop(100%, #c1c1c1));
+    background: -webkit-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+    background: -moz-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+    background: -o-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+    background: -ms-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+    background: linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#c1c1c1',GradientType=0 ); }
+  body form.search input#searchsubmit:hover {
+    padding: 6px 10px 7px;
+    border: 1px solid #c1c1c1;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px; }
   body .searchform label {
     color: white;
     font-size: 18px; }
@@ -229,11 +273,32 @@ body {
         body .main .content .search-form form.search input {
           padding: 5px 10px; }
         body .main .content .search-form form.search input[type="text"] {
+          font-size: 13px;
+          font-style: italic;
+          height: 34px;
+          padding: 3px 2px 1px 10px;
           width: 138px; }
         body .main .content .search-form form.search input#searchsubmit {
-          padding: 6px 10px 5px;
-          border: 1px inset;
-          background: white; }
+          padding: 6px 10px 7px;
+          border: 1px solid #aaa;
+          border-radius: 3px;
+          -moz-border-radius: 3px;
+          -webkit-border-radius: 3px;
+          -khtml-border-radius: 3px;
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f7f7f7), color-stop(100%, #c1c1c1));
+          background: -webkit-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+          background: -moz-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+          background: -o-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+          background: -ms-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+          background: linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f7f7f7', endColorstr='#c1c1c1',GradientType=0 ); }
+        body .main .content .search-form form.search input#searchsubmit:hover {
+          padding: 6px 10px 7px;
+          border: 1px solid #c1c1c1;
+          border-radius: 3px;
+          -moz-border-radius: 3px;
+          -webkit-border-radius: 3px;
+          -khtml-border-radius: 3px; }
       body .main .content .cform {
         background: none;
         border: 0;
