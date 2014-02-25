@@ -8,11 +8,16 @@
  * @subpackage Linc
  * @since Linc 1.0
  */
+if (!empty($_GET['s'])) {
+	$form_value = $_GET['s'];
+} else {
+	$form_value = 'Search Ludens';
+}
  ?>
 
  <form role="search" method="get" id="searchform" class="search" action="<?php echo home_url( '/' ); ?>">
     <div>
-        <input type="text" value="Search Ludens" name="s" id="s" onfocus="this.value=''" onblur="this.value='Search Ludens'" />
+        <input type="text" value="<?php echo $form_value; ?>" name="s" id="s" onfocus="this.value=''" onblur="this.value='<?php echo $form_value; ?>'" />
         <input type="submit" id="searchsubmit" value="Search" />
     </div>
 </form>
