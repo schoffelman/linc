@@ -350,7 +350,9 @@ body {
         margin: 25px 0;
         padding: 0 0; }
         body .main .content .sidebar ul.featured li {
-          margin-bottom: 35px; }
+          float: left;
+          margin-bottom: 35px;
+          min-width: 50%; }
           body .main .content .sidebar ul.featured li img {
             border-bottom: 5px solid #517928;
             max-width: 210px; }

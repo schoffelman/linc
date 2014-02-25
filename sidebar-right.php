@@ -24,7 +24,7 @@ if ( $the_query->have_posts() ) {
 	echo "<h3>Our Featured Items</h3>";
 	echo '<ul class="featured">';
 	while ( $the_query->have_posts() ) { $the_query->the_post();
-		echo "<li>";
+		echo '<li>';
 
 			// checking for post thumbnail
 			if ( has_post_thumbnail() ) { 

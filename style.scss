@@ -453,7 +453,9 @@ body {
 					margin: 25px 0;
 					padding: 0 0;
 					li {
+						float: left;
 						margin-bottom: 35px;
+						min-width: 50%;
 						img {
 							border-bottom: 5px solid $greengrass;
 							max-width: 210px;
