@@ -250,10 +250,13 @@ body {
 			text-align: right;
 			color: $white;
 			form.search {
+				font-family: $fontfamily;
 				input {
+					font-family: $fontfamily;
 					padding: 5px 10px;
 				}
 				input[type="text"] {
+					font-family: $fontfamily;
 					font-size: 13px;
 					font-style: italic;
 					height: 34px;
@@ -261,6 +264,7 @@ body {
 					width: 138px;
 				}
 				input#searchsubmit {
+					font-family: $fontfamily;
 					padding: 6px 10px 7px;
 					border: 1px solid #aaa;
 					border-radius: 2px;
@@ -273,6 +277,7 @@ body {
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#c1c1c1',GradientType=0 );
 				}
 				input#searchsubmit:hover {
+					font-family: $fontfamily;
 					padding: 6px 10px 7px;
 					border: 1px solid #c1c1c1;
 					border-radius: 3px;
@@ -284,7 +289,9 @@ body {
 		}
 	}
 	form.search {
+		font-family: $fontfamily;
 		input {
+			font-family: $fontfamily;
 			padding: 5px 10px;
 		}
 		input[type="text"] {
@@ -298,6 +305,7 @@ body {
 			padding: 6px 10px 7px;
 			border: 1px solid #aaa;
 			border-radius: 2px;
+			font-family: $fontfamily;
 			background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f7f7f7), color-stop(100%,#c1c1c1));
 			background: -webkit-linear-gradient(top, #f7f7f7 1%,#c1c1c1 100%);
 			background: -moz-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
@@ -307,6 +315,37 @@ body {
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#c1c1c1',GradientType=0 );
 		}
 		input#searchsubmit:hover {
+			font-family: $fontfamily;
+			padding: 6px 10px 7px;
+			border: 1px solid #c1c1c1;
+			border-radius: 3px;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			-khtml-border-radius: 3px;
+		}
+	}
+	form.cform {
+		font-family: $fontfamily;
+		input[type="submit"] {
+			font-family: $fontfamily;
+			color: $black;
+			float: left;
+			font-size: 14px;
+			margin-left: 11%;
+			padding: 6px 10px 7px;
+			text-shadow: none;
+			border: 1px solid #aaa;
+			border-radius: 2px;
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#f7f7f7), color-stop(100%,#c1c1c1));
+			background: -webkit-linear-gradient(top, #f7f7f7 1%,#c1c1c1 100%);
+			background: -moz-linear-gradient(top, #f7f7f7 1%, #c1c1c1 100%);
+			background: -o-linear-gradient(top, #f7f7f7 1%,#c1c1c1 100%);
+			background: -ms-linear-gradient(top, #f7f7f7 1%,#c1c1c1 100%);
+			background: linear-gradient(top, #f7f7f7 1%,#c1c1c1 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#c1c1c1',GradientType=0 );
+		}
+		input[type="submit"]:hover {
+			font-family: $fontfamily;
 			padding: 6px 10px 7px;
 			border: 1px solid #c1c1c1;
 			border-radius: 3px;
