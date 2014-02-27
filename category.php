@@ -70,7 +70,8 @@ get_header(); ?>
 						'cat' => $term->term_id,
 						'orderby' => 'meta_value_num title',
 						'meta_key' => 'wpcf-model',
-						'order' => 'ASC'
+						'order' => 'ASC',
+						'paged' => get_query_var('paged')
 					);
 
 					$product_listing = new WP_Query( $product_args );
