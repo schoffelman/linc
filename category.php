@@ -67,7 +67,10 @@ get_header(); ?>
 					// list the parameters for the query
 					$product_args = array( 
 						'posts_per_page' => 12,
-						'cat' => $term->term_id
+						'cat' => $term->term_id,
+						'orderby' => 'meta_value_num title',
+						'meta_key' => 'wpcf-model',
+						'order' => 'ASC'
 					);
 
 					$product_listing = new WP_Query( $product_args );
