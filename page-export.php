@@ -2,18 +2,20 @@
 /*
 Template Name: Export
 */
-if (!is_page(array('2950', '2952', '2954'))) 
+if (!is_page(array('all', 'cornheads', 'no-dupes'))) 
 	header('Location: /');
 
 
+global $post;
+//echo "<pre>";print_r($post);echo "</pre>";
 // Hack, change in prod. So ashamed. 
 $export_args = array();
-if (is_page('2950')) { // 2950 = all
-	$export_args = array('cat'=>'120', 'posts_per_page' => '-1');
-} elseif (is_page('2952')) { // 2952 = cornheads
-	$export_args = array('cat'=>'123', 'posts_per_page' => '-1');
-} elseif (is_page('2954')) { // 2954 = no_dupes
-	$export_args = array('cat'=>'120', 'posts_per_page' => '-1');
+if (is_page('all') && $post->post_parent) { // 2950 = all
+	$export_args = array('category_name'=>'inventory', 'posts_per_page' => '-1');
+} elseif (is_page('cornheads') && $post->post_parent) { // 2952 = cornheads
+	$export_args = array('category_name'=>'corn-heads', 'posts_per_page' => '-1');
+} elseif (is_page('no-dupes') && $post->post_parent) { // 2954 = no-dupes
+	$export_args = array('category_name'=>'inventory', 'posts_per_page' => '-1');
 } else {
 	die();
 }
