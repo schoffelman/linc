@@ -274,7 +274,7 @@ body {
       color: black;
       float: left;
       font-size: 14px;
-      margin-left: 11%;
+      margin: 0 50%;
       padding: 6px 10px 7px;
       text-shadow: none;
       border: 1px solid #aaa;
@@ -366,6 +366,8 @@ body {
         body .main .content .entry h2 a,
         body .main .content .entry h2 a:hover {
           color: white; }
+        body .main .content .entry .cf_info {
+          width: 100%; }
       body .main .content .gallery img,
       body .main .content .gallery img.attachment-post-thumbnail {
         border: none; }
