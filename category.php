@@ -65,13 +65,13 @@ get_header(); ?>
 				} else { 
 
 					// list the parameters for the query
+					// add 'paged' => get_query_var('paged') for prev/next links
 					$product_args = array( 
-						'posts_per_page' => 12,
+						'posts_per_page' => -1,
 						'cat' => $term->term_id,
 						'orderby' => 'meta_value_num title',
 						'meta_key' => 'wpcf-model',
-						'order' => 'ASC',
-						'paged' => get_query_var('paged')
+						'order' => 'ASC'
 					);
 
 					$product_listing = new WP_Query( $product_args );
@@ -100,12 +100,12 @@ get_header(); ?>
 							?></span>
 						</div>
 
-				<?php endwhile; ?>
+				<?php endwhile; /*?>
 					<div class="col-md-12">
 						<div class="nav-next alignleft green"><?php previous_posts_link( '&laquo; Previous Page' ); ?></div>
 						<div class="nav-previous alignright green"><?php next_posts_link( 'Next Page &raquo;' ); ?></div>
 					</div>
-				<?php endif;
+				<?php */ endif;
 				} 
 				/* Restore original Post Data */
 				wp_reset_postdata();
