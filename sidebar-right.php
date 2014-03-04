@@ -38,17 +38,14 @@ if ( $the_query->have_posts() ) {
 			<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
 			<?php 
 			$price = get_post_meta( $post->ID, 'wpcf-price', true );
-
-			echo '<div class="price">';
-			if (is_numeric($price)) {
+			$price = money_format('%.0n', preg_replace("/[^0-9.]/", "", $price));
+			if (is_numeric($price) && $price != 0) {
 				$price = '$' . number_format($price, 2);
-			} 
-			
-			if ( $price == '$0.00' | $price == '$0' || is_null($price) || empty($price)) {
+			} else {
 				$price = '<a href="/contact" title="'.PRICE_CONTACT_VERBIAGE.'">'.PRICE_CONTACT_VERBIAGE.'</a>';
 			} 
-			echo 'Price: ' . $price;
-			echo '</div>';
+
+			echo '<div class="price">Price: ' . $price . '</div>';
 		
 		echo "</li>";
 	} 

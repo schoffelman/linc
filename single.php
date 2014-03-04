@@ -38,11 +38,10 @@ get_header(); ?>
 	 			<div class="col-md-7 inventory-entry">
  					<?php 
 						$price = get_post_meta( $post->ID, 'wpcf-price', true ); 
-						if (is_numeric($price)) {
+						$price = money_format('%.0n', preg_replace("/[^0-9.]/", "", $price));
+						if (is_numeric($price) && $price != 0) {
 							$price = '$' . number_format($price, 2);
-						} 
-						
-						if ( $price == '$0.00' | $price == '$0' || is_null($price) || empty($price)) {
+						} else {
 							$price = '<a href="/contact" title="'.PRICE_CONTACT_VERBIAGE.'">'.PRICE_CONTACT_VERBIAGE.'</a>';
 						} 
 						?>
