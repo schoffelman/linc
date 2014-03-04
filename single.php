@@ -36,18 +36,18 @@ get_header(); ?>
 						<?php echo do_shortcode(' [gallery exclude="' . get_post_thumbnail_id( $post->ID ) . '"] '); ?>
 	 			</div>
 	 			<div class="col-md-7 inventory-entry">
- 				
- 					<div class="price">
-						<h3><?php 
-							$price = get_post_meta( $post->ID, 'wpcf-price', true ); 
+ 					<?php 
+						$price = get_post_meta( $post->ID, 'wpcf-price', true ); 
+						if (is_numeric($price)) {
+							$price = '$' . number_format($price, 2);
+						} 
 						
-							if ( $price != '$0.00' && $price != '$0' && !is_null($price)) {
-								echo $price;
-							} else {
-								echo 'Call for Price';
-							} 
-
-						 ?></h3>
+						if ( $price == '$0.00' | $price == '$0' || is_null($price) || empty($price)) {
+							$price = '<a href="/contact" title="'.PRICE_CONTACT_VERBIAGE.'">'.PRICE_CONTACT_VERBIAGE.'</a>';
+						} 
+						?>
+ 					<div class="price">
+						<h3><?php echo $price; ?></h3>
 						 <a href="tel:16053515387" title="Phone" class="phone-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/phone-icon.png" alt="phone" /></a>
 						 <a href="<?php echo CONTACT_US; ?>" title="contact" class="email-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/mail-icon.png" alt="contact" /></a>
 					</div>
@@ -59,7 +59,6 @@ get_header(); ?>
 								$inventory_details = Array(
 									'alternative price' => get_post_meta( $post->ID, 'wpcf-alternative-price', true ),
 									'model' => get_post_meta( $post->ID, 'wpcf-model', true ),
-									'price' => get_post_meta( $post->ID, 'wpcf-price', true ),
 									'specification' => get_post_meta( $post->ID, 'wpcf-specification', true ),
 									'year' => get_post_meta( $post->ID, 'wpcf-year', true ) ); 
 								// echo "<pre>"; print_r($inventory_details); echo "</pre>";
@@ -74,9 +73,7 @@ get_header(); ?>
 									if (!empty($inventory_details['model'])) {
 										echo '<li><span>model</span>: ' .  $inventory_details['model'] . '</li>';
 									}
-									if (!empty($inventory_details['price'])) {
-										echo '<li><span>price</span>: ' .  $inventory_details['price'] . '</li>';
-									}
+									echo '<li><span>price</span>: ' .  $price . '</li>';
 									if (!empty($inventory_details['year'])) {
 										echo '<li><span>year</span>: ' .  $inventory_details['year'] . '</li>';
 									}

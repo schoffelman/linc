@@ -52,14 +52,17 @@ get_header(); ?>
 							} ?>
 						</a>
 						<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-						<?php $price = get_post_meta( $post->ID, 'wpcf-price', true ); ?>
-						<span class="price">Price: <?php
-							if ( $price != '$0.00' && $price != '$0' && !is_null($price)) { 
-								echo $price; 
-							} else {
-								echo '<a href="/contact" title="contact us">Contact Us</a>';
-							}
-						?></span>
+						<?php 
+							$price = get_post_meta( $post->ID, 'wpcf-price', true ); 
+							if (is_numeric($price)) {
+								$price = '$' . number_format($price, 2);
+							} 
+							
+							if ( $price == '$0.00' || $price == '$0' || is_null($price) || empty($price) ) {
+								$price = '<a href="/contact" title="'.PRICE_CONTACT_VERBIAGE.'">'.PRICE_CONTACT_VERBIAGE.'</a>';
+							} 
+						?>
+						<span class="price">Price: <?php echo $price; ?></span>
 					</div>
 
 			<?php }
