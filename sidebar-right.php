@@ -42,7 +42,7 @@ if ( $the_query->have_posts() ) {
 			if (is_numeric($price) && $price != 0) {
 				$price = '$' . number_format($price, 2);
 			} else {
-				$price = '<a href="/contact" title="'.PRICE_CONTACT_VERBIAGE.'">'.PRICE_CONTACT_VERBIAGE.'</a>';
+				$price = '<a href="'.CONTACT_US.'" title="'.PRICE_CONTACT_VERBIAGE.'">'.PRICE_CONTACT_VERBIAGE.'</a>';
 			} 
 
 			echo '<div class="price">Price: ' . $price . '</div>';
