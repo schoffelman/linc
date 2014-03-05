@@ -32,7 +32,20 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 				<div class="col-md-5 gallery">
-						<?php the_post_thumbnail(); ?>
+						<?php //display site thumbnail ?>
+						<?php if ( has_post_thumbnail() ) { ?>
+							<?php $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large'); ?>
+							<dl style="margin:0;">
+								<dt>
+									<div class="gallery1">
+										<a href="<?php echo $large_image_url[0]; ?>">
+											<?php the_post_thumbnail(); ?>
+										</a>
+									</div>
+								</dt>
+							</dl>
+						<?php } ?>
+						<?php //display gallery code ?>
 						<?php echo do_shortcode(' [gallery exclude="' . get_post_thumbnail_id( $post->ID ) . '"] '); ?>
 	 			</div>
 	 			<div class="col-md-7 inventory-entry">
