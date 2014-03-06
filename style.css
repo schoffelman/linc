@@ -77,6 +77,9 @@ hr {
 .grid-gutter-width {
   width: 20px; }
 
+html {
+  background: #cccc99 url(images/bg-grad.gif) repeat-x 0 185px; }
+
 body.home {
   background: #cccc99 url(images/bg-grad.gif) repeat-x 0 585px; }
   body.home header {
@@ -371,6 +374,19 @@ body {
           color: white; }
         body .main .content .entry .cf_info {
           width: 100%; }
+        body .main .content .entry .videowrapper {
+          position: relative;
+          padding-bottom: 56.25%;
+          padding-top: 30px;
+          height: 0;
+          overflow: hidden;
+          text-align: center; }
+          body .main .content .entry .videowrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; }
       body .main .content .gallery img,
       body .main .content .gallery img.attachment-post-thumbnail {
         border: none; }

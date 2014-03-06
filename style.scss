@@ -76,6 +76,8 @@ hr 			{ border-top: 1px solid $greentan; clear: both; margin-bottom: 40px; }
 .container { width: 960px; }
 .grid-gutter-width { width: 20px; }
 
+html { background: $tan url(images/bg-grad.gif) repeat-x 0 185px; }
+
 body.home {
 	background: $tan url(images/bg-grad.gif) repeat-x 0 585px;
 	header {
@@ -444,6 +446,21 @@ body {
 				}
 				.cf_info {
 					width: 100%;
+				}
+				.videowrapper {
+					position: relative;
+					padding-bottom: 56.25%;
+					padding-top: 30px;
+					height: 0;
+					overflow: hidden;
+					text-align: center;
+					iframe {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+					}
 				}
 			}
 			.gallery {
