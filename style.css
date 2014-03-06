@@ -433,7 +433,8 @@ body {
             body .main .content .inventory-entry .details table td, body .main .content .inventory-entry .details table th {
               padding: 0 40px 0 10px; }
       body .main .content .products {
-        min-height: 325px; }
+        min-height: 325px;
+        min-width: 240px; }
         body .main .content .products a.thumb {
           display: block;
           overflow: hidden; }
@@ -525,7 +526,8 @@ body {
 
 @media all and (max-width: 991px) {
   body.home .content .featured-items .featured {
-    min-height: 275px; }
+    min-height: 275px;
+    min-width: 240px; }
 
   body .container {
     width: 100%; }
@@ -560,7 +562,8 @@ body {
       float: left; } }
 @media (max-width: 680px) {
   body.home .content .featured-items .featured {
-    min-height: 250px; }
+    min-height: 250px;
+    min-width: 240px; }
 
   body .breadcrumbs {
     padding-left: 15px; } }

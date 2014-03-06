@@ -43,7 +43,7 @@ get_header(); ?>
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post(); ?>
 
-					<div class="col-sm-6 col-md-3 featured">							
+					<div class="col-sm-6 col-xs-6 col-md-3 featured">							
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="thumb">
 							<?php if ( has_post_thumbnail() ) {
 								the_post_thumbnail(array(210, 175));

@@ -81,7 +81,7 @@ get_header(); ?>
 					// The Loop
 					if ( $product_listing->have_posts() ) : while ( $product_listing->have_posts() ) : $product_listing->the_post(); ?>
 
-						<div class="col-md-3 products">						
+						<div class="col-sm-6 col-xs-6 col-md-3 products">						
 							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="thumb">
 								<?php if ( has_post_thumbnail() ) {
 									the_post_thumbnail(array(210, 175));

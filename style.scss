@@ -529,6 +529,7 @@ body {
 			}
 			.products {
 				min-height: 325px;
+				min-width: 240px;
 				a.thumb {
 					display: block;
 					overflow: hidden;
@@ -670,6 +671,7 @@ body {
 			.featured-items {
 				.featured {
 					min-height: 275px;
+					min-width: 240px;
 				}
 			}
 		}
@@ -735,6 +737,7 @@ body {
 	body.home {
 		.content .featured-items .featured {
 			min-height: 250px;
+			min-width: 240px;
 		}
 	}
 	body {
