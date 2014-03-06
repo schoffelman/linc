@@ -397,7 +397,7 @@ body {
         height: auto; }
       body .main .content .gallery dl.gallery-item {
         margin-bottom: 0px;
-        min-width: 125px; }
+        min-width: 120px; }
       body .main .content .gallery dt.gallery-icon img {
         border: none !important;
         max-height: 110px;
