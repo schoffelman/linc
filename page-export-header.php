@@ -58,7 +58,6 @@ if (!empty($meta_array['wpcf-price'])) {
 }
 
 $manufacturers = types_render_field('manufacturers', array('output' => 'normal'));
-echo "<pre>"; print_r($manufacturers); echo "</pre>";
 if (!empty($manufacturers)) { 
 	$tab_listing .= $manufacturers . "\t";
 }
@@ -83,8 +82,7 @@ $tab_listing .= "\r\n";
 // echo "<pre>" . get_the_title();print_r($meta_array); echo "</pre>";
 echo $tab_listing;
 
-if ($count >= 4)
-	die();
+
 endwhile; endif;
 
 /* Restore original Post Data */
