@@ -471,6 +471,7 @@ body {
 				img.attachment-post-thumbnail {
 					margin-left: 2px;
 					max-width: 360px;
+					min-width: 240px;
 					height: auto;
 				}
 				dl.gallery-item {
