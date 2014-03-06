@@ -119,6 +119,18 @@ body {
 	#lightbox-container-image-data-box {
 		position: relative;
 		z-index: 10;
+		width: 95% !important;
+	}
+	#lightbox-container-image-box {
+		height: auto !important;
+		width: 95% !important;
+		div#lightbox-container-image {
+			padding-bottom: 10px !important;
+		}
+		img {
+			height: auto !important;
+			width: 95% !important;
+		}
 	}
 	color: $black;
 	header.navbar {
