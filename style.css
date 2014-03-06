@@ -393,7 +393,7 @@ body {
       body .main .content .gallery img.attachment-post-thumbnail {
         margin-left: 2px;
         max-width: 360px;
-        min-width: 240px;
+        width: 100%;
         height: auto; }
       body .main .content .gallery dl.gallery-item {
         margin-bottom: 0px;
