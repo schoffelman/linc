@@ -38,6 +38,9 @@ h5 {
 h6 {
   font-size: 0.8em; }
 
+sup {
+  color: #ff9933; }
+
 .aligncenter {
   margin: 0 auto;
   text-align: center; }

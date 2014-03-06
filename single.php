@@ -106,6 +106,9 @@ get_header(); ?>
 							 ?>
 						</div>
 					</div>
+					<div class="disclaimer">
+						<sup>*</sup> <i style="font-size:12px">This Information is Subject to Change</i>
+					</div>
 
 	 			</div>
 				<?php endwhile;
