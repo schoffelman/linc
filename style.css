@@ -116,6 +116,9 @@ body {
     body #lightbox-container-image-box img {
       height: auto !important;
       width: 95% !important; }
+    body #lightbox-container-image-box #lightbox-loading img {
+      height: 32px !important;
+      width: 32px !important; }
   body header.navbar {
     border: 0;
     margin-bottom: 0; }
