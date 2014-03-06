@@ -397,7 +397,7 @@ body {
         height: auto; }
       body .main .content .gallery dl.gallery-item {
         margin-bottom: 0px;
-        min-width: 110px; }
+        min-width: 125px; }
       body .main .content .gallery dt.gallery-icon img {
         border: none !important;
         max-height: 110px;
@@ -577,7 +577,9 @@ body {
   body .gallery {
     margin-bottom: 20px; }
     body .gallery dt.gallery-icon a {
-      float: left; } }
+      float: left; }
+    body .gallery br {
+      display: none; } }
 @media (max-width: 680px) {
   body.home .content .featured-items .featured {
     min-height: 250px;

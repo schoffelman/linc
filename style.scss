@@ -476,7 +476,7 @@ body {
 				}
 				dl.gallery-item {
 					margin-bottom: 0px;
-					min-width: 110px;
+					min-width: 125px;
 				}
 				dt.gallery-icon img {
 					border: none !important;
@@ -747,6 +747,9 @@ body {
 			margin-bottom: 20px;
 			dt.gallery-icon a {
 				float: left;
+			}
+			br {
+				display: none;
 			}
 		}
 	}
