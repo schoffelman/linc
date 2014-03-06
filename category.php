@@ -90,14 +90,20 @@ get_header(); ?>
 								} ?>
 							</a>
 							<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-							<?php $price = get_post_meta( $post->ID, 'wpcf-price', true ); ?>
-							<span class="price">Price: <?php
-								if ( $price != '$0.00' && $price != '$0' && !is_null($price)) { 
-									echo $price; 
+							<?php 
+								$price = get_post_meta( $post->ID, 'wpcf-price', true ); 
+								if($price == "sold"){
+									$price = '<span style="font-weight:bold;">SOLD</span>';
 								} else {
-									echo '<a href="/contact" title="contact us">Contact Us</a>';
+									$price = money_format('%.0n', preg_replace("/[^0-9.]/", "", $price));
+									if (is_numeric($price) && $price != 0) {
+										$price = '$' . number_format($price, 2);
+									} else {
+										$price = '<a href="'.CONTACT_US.'" title="'.PRICE_CONTACT_VERBIAGE.'">'.PRICE_CONTACT_VERBIAGE.'</a>';
+									} 
 								}
-							?></span>
+							?>
+							<span class="price">Price: <?php echo $price; ?></span>
 						</div>
 
 				<?php endwhile; /*?>
