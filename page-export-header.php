@@ -1,8 +1,8 @@
 <?php
 /*
-Template Name: Export
+Template Name: Export Header
 */
-if (!is_page(array('all', 'cornheads', 'no-dupes'))) 
+if (!is_page(array('export', 'all', 'cornheads', 'no-dupes'))) 
 	header('Location: /');
 
 
@@ -16,6 +16,8 @@ if (is_page('all') && $post->post_parent) { // 2950 = all
 	$export_args = array('category_name'=>'corn-heads', 'posts_per_page' => '-1');
 } elseif (is_page('no-dupes') && $post->post_parent) { // 2954 = no-dupes
 	$export_args = array('category_name'=>'inventory', 'posts_per_page' => '-1');
+} elseif (is_page('export')) { // 2948 = export (parent)
+	$export_args = array('category_name'=>'inventory', 'posts_per_page' => '-1');
 } else {
 	die();
 }
@@ -24,6 +26,14 @@ if (is_page('all') && $post->post_parent) { // 2950 = all
 // The Query
 $export_query = new WP_Query( $export_args );
 $count = 0;
+
+$tab_header = "title" . "\t" . "title" . "\t";
+$tab_header .= "model" . "\t";
+$tab_header .= "description" . "\t";
+$tab_header .= "price" . "\t";
+$tab_header .= "manufacturers" . "\t";
+$tab_header .= "images" . "\t\r\n";
+echo $tab_header;
 if ( $export_query->have_posts() ) : while ( $export_query->have_posts() ) : $export_query->the_post();
 $count++;
 
@@ -48,6 +58,7 @@ if (!empty($meta_array['wpcf-price'])) {
 }
 
 $manufacturers = types_render_field('manufacturers', array('output' => 'normal'));
+echo "<pre>"; print_r($manufacturers); echo "</pre>";
 if (!empty($manufacturers)) { 
 	$tab_listing .= $manufacturers . "\t";
 }
@@ -72,7 +83,8 @@ $tab_listing .= "\r\n";
 // echo "<pre>" . get_the_title();print_r($meta_array); echo "</pre>";
 echo $tab_listing;
 
-
+if ($count >= 4)
+	die();
 endwhile; endif;
 
 /* Restore original Post Data */
