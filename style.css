@@ -556,6 +556,18 @@ body {
     min-height: 275px;
     min-width: 240px; }
 
+  body #lightbox-container-image-data-box {
+    position: relative;
+    z-index: 10;
+    width: 95% !important; }
+  body #lightbox-container-image-box {
+    height: auto !important;
+    width: 95% !important; }
+    body #lightbox-container-image-box div#lightbox-container-image {
+      padding-bottom: 10px !important; }
+    body #lightbox-container-image-box img {
+      height: auto !important;
+      width: 95% !important; }
   body .container {
     width: 100%; }
   body header h1.site-title,
