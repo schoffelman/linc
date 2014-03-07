@@ -5,6 +5,9 @@
 * @since Linc 1.0  
 */ 
 
+define('PRICE_CONTACT_VERBIAGE', 'Contact Us');
+define('CONTACT_US', '/contact-us');
+define('TEL_PHONE', '16053634000');
 
 /* 
 * Theme Support Features 
