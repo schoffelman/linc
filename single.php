@@ -49,21 +49,9 @@ get_header(); ?>
 						<?php echo do_shortcode(' [gallery exclude="' . get_post_thumbnail_id( $post->ID ) . '"] '); ?>
 	 			</div>
 	 			<div class="col-md-7 inventory-entry">
- 					<?php 
-						$price = get_post_meta( $post->ID, 'wpcf-price', true ); 
-						if($price == "sold"){
-							$price = '<span style="font-weight:bold;">SOLD</span>';
-						} else {
-							$price = money_format('%.0n', preg_replace("/[^0-9.]/", "", $price));
-							if (is_numeric($price) && $price != 0) {
-								$price = '$' . number_format($price, 2);
-							} else {
-								$price = '<a href="'.CONTACT_US.'" title="'.PRICE_CONTACT_VERBIAGE.'">'.PRICE_CONTACT_VERBIAGE.'</a>';
-							} 
-						}
-						?>
+ 					<?php $price = get_post_meta( $post->ID, 'wpcf-price', true ); ?>
  					<div class="price">
-						<h3><?php echo $price; ?></h3>
+						<h3><?php echo ludens_price_cleaning($price); ?></h3>
 						 <a href="tel:<?php echo TEL_PHONE; ?>" title="Phone" class="phone-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/phone-icon.png" alt="phone" /></a>
 						 <a href="<?php echo CONTACT_US; ?>" title="contact" class="email-icon"><img src="<?php echo get_template_directory_uri(); ?>/images/mail-icon.png" alt="contact" /></a>
 					</div>
@@ -89,7 +77,7 @@ get_header(); ?>
 									if (!empty($inventory_details['model'])) {
 										echo '<li><span>model</span>: ' .  $inventory_details['model'] . '</li>';
 									}
-									echo '<li><span>price</span>: ' .  $price . '</li>';
+									echo '<li><span>price</span>: ' .  ludens_price_cleaning($price) . '</li>';
 									if (!empty($inventory_details['year'])) {
 										echo '<li><span>year</span>: ' .  $inventory_details['year'] . '</li>';
 									}

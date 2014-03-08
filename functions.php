@@ -19,7 +19,32 @@ add_theme_support( 'menus' );
 // Add post thumbnail funcitonality to theme
 add_theme_support( 'post-thumbnails' );
 
+// function used to preformat pricing
+function ludens_price_cleaning($price) {
 
+    // set default contact link if price isn't available
+    $contact_link = '<a href="'.CONTACT_US.'" title="'.PRICE_CONTACT_VERBIAGE.'">'.PRICE_CONTACT_VERBIAGE.'</a>';
+
+    // if price is "sold", format and return it
+    if ($price == "sold"){
+        return '<span style="font-weight:bold;">SOLD</span>';
+    } 
+
+    // check to see if the value is empty
+    if (!empty($price)) {
+
+        // clean it of all nonessential formatting
+        $price = money_format('%.0n', preg_replace("/[^0-9.]/", "", $price));
+
+        // if the price is numeric, empty and not equal to 0 - not sure if i actually need is_numeric
+        if ( is_numeric($price) && $price != 0) {
+            return '$' . number_format($price, 2);
+        } 
+    }
+
+    // all else fails, return the contact link
+    return $contact_link;
+}
 
 /* 
 * Theme features / enhancements 
