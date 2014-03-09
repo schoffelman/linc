@@ -9,6 +9,21 @@ define('PRICE_CONTACT_VERBIAGE', 'Contact Us');
 define('CONTACT_US', '/contact-us');
 define('TEL_PHONE', '16053634000');
 
+
+// change the excerpt length
+function custom_excerpt_length( $length ) {
+    return 1500;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+// remove ellipsis
+function new_excerpt_more( $more ) {
+    return '';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+
+
 /* 
 * Theme Support Features 
 */
