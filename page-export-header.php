@@ -5,19 +5,20 @@ Template Name: Export Header
 if (!is_page(array('export', 'all', 'cornheads', 'no-dupes'))) 
 	header('Location: /');
 
-
+header("Content-Type: text/plain");
 global $post;
 //echo "<pre>";print_r($post);echo "</pre>";
 // Hack, change in prod. So ashamed. 
+define('ITEMS_PER_PAGE', '-1');
 $export_args = array();
 if (is_page('all') && $post->post_parent) { // 2950 = all
-	$export_args = array('category_name'=>'inventory', 'posts_per_page' => '-1');
+	$export_args = array('category_name'=>'inventory', 'posts_per_page' => ITEMS_PER_PAGE);
 } elseif (is_page('cornheads') && $post->post_parent) { // 2952 = cornheads
-	$export_args = array('category_name'=>'corn-heads', 'posts_per_page' => '-1');
+	$export_args = array('category_name'=>'corn-heads', 'posts_per_page' => ITEMS_PER_PAGE);
 } elseif (is_page('no-dupes') && $post->post_parent) { // 2954 = no-dupes
-	$export_args = array('category_name'=>'inventory', 'posts_per_page' => '-1');
+	$export_args = array('category_name'=>'inventory', 'posts_per_page' => ITEMS_PER_PAGE);
 } elseif (is_page('export')) { // 2948 = export (parent)
-	$export_args = array('category_name'=>'inventory', 'posts_per_page' => '-1');
+	$export_args = array('category_name'=>'inventory', 'posts_per_page' => ITEMS_PER_PAGE);
 } else {
 	die();
 }
@@ -27,19 +28,19 @@ if (is_page('all') && $post->post_parent) { // 2950 = all
 $export_query = new WP_Query( $export_args );
 $count = 0;
 
-$tab_header = "title" . "\t" . "title" . "\t";
+$tab_header = "title" . "\t";
 $tab_header .= "model" . "\t";
 $tab_header .= "description" . "\t";
 $tab_header .= "price" . "\t";
-$tab_header .= "manufacturers" . "\t";
-$tab_header .= "images" . "\t\r\n";
+$tab_header .= "manufacturer" . "\t";
+$tab_header .= "image" . "\t\r\n";
 echo $tab_header;
 if ( $export_query->have_posts() ) : while ( $export_query->have_posts() ) : $export_query->the_post();
 $count++;
 
 $meta_array = get_post_meta( $post->ID, '', false);
 
-$tab_listing = get_the_title() . "\t" . get_the_title() . "\t";
+$tab_listing = get_the_title() . "\t";
 
 if (!empty($meta_array['wpcf-model'])) { 
 	$tab_listing .= $meta_array['wpcf-model'][0] . "\t";
@@ -47,8 +48,8 @@ if (!empty($meta_array['wpcf-model'])) {
 }
 
 if (get_the_content()) { 
-	$clean_content = preg_replace( '|\[(.+?)\](.+?\[/\\1\])?|s', '', get_the_excerpt()) . "\t";
-	$tab_listing .= trim($clean_content);
+	$clean_content = preg_replace( '|\[(.+?)\](.+?\[/\\1\])?|s', '', get_the_excerpt());
+	$tab_listing .= trim($clean_content) . "\t";
 }
 
 if (!empty($meta_array['wpcf-price'])) { 
@@ -58,6 +59,7 @@ if (!empty($meta_array['wpcf-price'])) {
 }
 
 $manufacturers = types_render_field('manufacturers', array('output' => 'normal'));
+// echo "********* "; print_r($manufacturers); echo " *********";
 if (!empty($manufacturers)) { 
 	$tab_listing .= $manufacturers . "\t";
 }
@@ -71,10 +73,12 @@ $gallery_count = count($gallery_images);
 foreach($gallery_images as $key => $gallery_image) {
 	$gallery_list .= $gallery_image;
 	if ($key+1 < $gallery_count) {
-		$gallery_list .= "\t";
+		$gallery_list .= ", ";
 	}
 }
-
+if($gallery_count > 1){
+	$gallery_list .= "\t";
+}
 $tab_listing .= $gallery_list;
 
 $tab_listing .= "\r\n";

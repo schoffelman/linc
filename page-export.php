@@ -5,7 +5,7 @@ Template Name: Export
 if (!is_page(array('all', 'cornheads', 'no-dupes'))) 
 	header('Location: /');
 
-
+header("Content-Type: text/plain");
 global $post;
 //echo "<pre>";print_r($post);echo "</pre>";
 // Hack, change in prod. So ashamed. 
