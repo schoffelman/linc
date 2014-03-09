@@ -17,7 +17,7 @@ if (!empty($_GET['s'])) {
 
  <form role="search" method="get" id="searchform" class="search" action="<?php echo home_url( '/' ); ?>">
     <div>
-        <input type="text" value="<?php echo $form_value; ?>" name="s" id="s" onfocus="this.value=''" onblur="this.value='<?php echo $form_value; ?>'" />
+        <input type="text" value="<?php echo $form_value; ?>" name="s" id="s" onfocus="this.value=''" />
         <input type="submit" id="searchsubmit" value="Search" />
     </div>
 </form>
