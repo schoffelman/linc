@@ -72,7 +72,7 @@ get_header(); ?>
 										echo '<li><span>alternative price</span>: ' .  $inventory_details['alternative price'] . '</li>';
 									}
 									if (!empty($manufacturers)) {
-										echo '<li><span>manufacturers</span>: ' .  $manufacturers . '</li>';
+										echo '<li><span>manufacturer</span>: ' .  $manufacturers . '</li>';
 									}
 									if (!empty($inventory_details['model'])) {
 										echo '<li><span>model</span>: ' .  $inventory_details['model'] . '</li>';
