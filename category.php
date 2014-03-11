@@ -69,7 +69,7 @@ get_header(); ?>
 					$product_args = array( 
 						'posts_per_page' => -1,
 						'cat' => $term->term_id,
-						'orderby' => 'meta_value_num price',
+						'orderby' => 'meta_value_num title',
 						'meta_key' => 'wpcf-model',
 						'order' => 'ASC'
 					);
