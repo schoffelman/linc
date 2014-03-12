@@ -8,7 +8,7 @@ if (!is_page(array('export', 'all', 'cornheads', 'no-dupes')))
 header("Content-Type: text/plain");
 global $post;
 //echo "<pre>";print_r($post);echo "</pre>";
-// Hack, change in prod. So ashamed. 
+
 define('ITEMS_PER_PAGE', '-1');
 $export_args = array();
 if (is_page('all') && $post->post_parent) { // 2950 = all
@@ -28,7 +28,8 @@ if (is_page('all') && $post->post_parent) { // 2950 = all
 $export_query = new WP_Query( $export_args );
 $count = 0;
 
-$tab_header = "title" . "\t";
+$tab_header = "inventory_id" . "\t";
+$tab_header .= "title" . "\t";
 $tab_header .= "model" . "\t";
 $tab_header .= "description" . "\t";
 $tab_header .= "price" . "\t";
@@ -40,7 +41,11 @@ $count++;
 
 $meta_array = get_post_meta( $post->ID, '', false);
 
-$tab_listing = get_the_title() . "\t";
+// display the site inventory id
+$tab_listing = $post->ID . "\t";
+
+// display the title
+$tab_listing .= get_the_title() . "\t";
 
 if (!empty($meta_array['wpcf-model'])) { 
 	$tab_listing .= $meta_array['wpcf-model'][0] . "\t";
@@ -64,7 +69,7 @@ if (!empty($manufacturers)) {
 	$tab_listing .= $manufacturers . "\t";
 }
 
-// To Do: Take out dupes
+
 
 // Pull Image Files
 $gallery_images = get_post_gallery_images();
@@ -79,6 +84,7 @@ foreach($gallery_images as $key => $gallery_image) {
 if($gallery_count > 1){
 	$gallery_list .= "\t";
 }
+
 $tab_listing .= $gallery_list;
 
 $tab_listing .= "\r\n";
