@@ -1,0 +1,22 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+
+# Rewrite underscores to hyphens except for files with extentions
+RewriteCond %{REQUEST_URI} !(\.jpg|\.png|\.jpeg|\.gif|\.swf|\.pdf)$ [NC]
+RewriteRule ^([^_]*)_(.*)$ /$1-$2 [R=301,L]
+
+# rewrite catalog to inventory
+RewriteRule ^/?catalog/(.*)$ /inventory/$1 [R,L]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule . index.php [L]
+
+</IfModule>
+
+# END WordPress
