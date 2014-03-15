@@ -5,7 +5,7 @@ Template Name: Export No Header
 if (!is_page(array('export', 'all', 'cornheads', 'no-dupes'))) 
 	header('Location: /');
 
-header("Content-Type: text/plain");
+header("Content-Type: text/plain; charset=utf-8");
 global $post;
 //echo "<pre>";print_r($post);echo "</pre>";
 
@@ -36,7 +36,7 @@ $meta_array = get_post_meta( $post->ID, '', false);
 $tab_listing = $post->ID . "\t";
 
 // display the title
-$tab_listing .= get_the_title() . "\t"; // . get_the_title() . "\t";
+$tab_listing .= html_entity_decode(get_the_title(), ENT_QUOTES, 'UTF-8') . "\t"; // . get_the_title() . "\t";
 
 if (!empty($meta_array['wpcf-model'])) { 
 	$tab_listing .= $meta_array['wpcf-model'][0] . "\t";
@@ -45,7 +45,7 @@ if (!empty($meta_array['wpcf-model'])) {
 
 if (get_the_content()) { 
 	$clean_content = preg_replace( '|\[(.+?)\](.+?\[/\\1\])?|s', '', get_the_excerpt());
-	$tab_listing .= trim($clean_content) . "\t";
+	$tab_listing .= html_entity_decode(trim($clean_content), ENT_QUOTES, 'UTF-8') . "\t";
 }
 
 if (!empty($meta_array['wpcf-price'])) { 
