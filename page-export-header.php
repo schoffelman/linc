@@ -28,28 +28,34 @@ if (is_page('all') && $post->post_parent) { // 2950 = all
 $export_query = new WP_Query( $export_args );
 $count = 0;
 
-$tab_header = "inventory_id" . "\t";
+$tab_header = "dealer_id" . "\t";
+$tab_header .= "inventory_id" . "\t";
 $tab_header .= "title" . "\t";
 $tab_header .= "model" . "\t";
 $tab_header .= "description" . "\t";
 $tab_header .= "price" . "\t";
 $tab_header .= "manufacturer" . "\t";
+$tab_header .= "year" . "\t";
+$tab_header .= "new_used" . "\t";
+$tab_header .= "category_name" . "\t";
 $tab_header .= "image" . "\t\r\n";
 echo $tab_header;
 if ( $export_query->have_posts() ) : while ( $export_query->have_posts() ) : $export_query->the_post();
 $count++;
 
+// Dealer ID
+$tab_listing = "1796" . "\t";
+
 $meta_array = get_post_meta( $post->ID, '', false);
 
 // display the site inventory id
-$tab_listing = $post->ID . "\t";
+$tab_listing .= $post->ID . "\t";
 
 // display the title
 $tab_listing .= html_entity_decode(get_the_title(), ENT_QUOTES, 'UTF-8') . "\t";
 
 if (!empty($meta_array['wpcf-model'])) { 
 	$tab_listing .= $meta_array['wpcf-model'][0] . "\t";
-	// print_r($meta_array['wpcf-model']);
 }
 
 if (get_the_content()) { 
@@ -69,6 +75,33 @@ if (!empty($manufacturers)) {
 	$tab_listing .= $manufacturers . "\t";
 }
 
+// calculate year and new/used
+if (!empty($meta_array['wpcf-year'])) { 
+	$year = $meta_array['wpcf-year'][0];
+	$tab_listing .= $year . "\t";
+	if($year == date('Y') || $year == (date('Y')-1)){
+		$tab_listing .= "New" . "\t";
+	} else {
+		$tab_listing .= "Used" . "\t";
+	}
+}
+
+// display category
+$count = 0;
+$category_ids = wp_get_post_categories($post->ID);
+
+$cat_count = count($category_ids);
+$category_list = '';
+foreach ($category_ids as $category_id) {
+	$count++;
+	// print_r($category->name);
+	$category = get_category($category_id);
+	$category_list .= $category->name;
+	if ($count < $cat_count) {
+		$category_list .= ", ";
+	}
+}
+$tab_listing .= $category_list . "\t";
 
 
 // Pull Image Files

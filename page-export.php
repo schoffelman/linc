@@ -30,6 +30,9 @@ $count = 0;
 if ( $export_query->have_posts() ) : while ( $export_query->have_posts() ) : $export_query->the_post();
 $count++;
 
+// Dealer ID
+$tab_listing = "1796" . "\t";
+
 $meta_array = get_post_meta( $post->ID, '', false);
 
 // display the site inventory id
@@ -60,7 +63,33 @@ if (!empty($manufacturers)) {
 	$tab_listing .= $manufacturers . "\t";
 }
 
-// To Do: Take out dupes
+// display year and new/used
+if (!empty($meta_array['wpcf-year'])) { 
+	$year = $meta_array['wpcf-year'][0];
+	$tab_listing .= $year . "\t";
+	if($year == date('Y') || $year == (date('Y')-1)){
+		$tab_listing .= "New" . "\t";
+	} else {
+		$tab_listing .= "Used" . "\t";
+	}
+}
+
+// display category
+$count = 0;
+$category_ids = wp_get_post_categories($post->ID);
+
+$cat_count = count($category_ids);
+$category_list = '';
+foreach ($category_ids as $category_id) {
+	$count++;
+	// print_r($category->name);
+	$category = get_category($category_id);
+	$category_list .= $category->name;
+	if ($count < $cat_count) {
+		$category_list .= ", ";
+	}
+}
+$tab_listing .= $category_list . "\t";
 
 // Pull Image Files
 $gallery_images = get_post_gallery_images();
