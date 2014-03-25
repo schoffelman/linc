@@ -95,10 +95,21 @@ $tab_listing .= $category_list . "\t";
 $gallery_images = get_post_gallery_images();
 $gallery_list = '';
 $gallery_count = count($gallery_images);
+
+// find the featured image URL
+$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full');
+
+$featured_image = $large_image_url[0];
+if ($gallery_count >= 1) {
+	$featured_image .=  ", ";
+} 
+
+$gallery_list .= $featured_image;
+
 foreach($gallery_images as $key => $gallery_image) {
 	$gallery_list .= $gallery_image;
 	if ($key+1 < $gallery_count) {
-		$gallery_list .= "\t";
+		$gallery_list .= ", ";
 	}
 }
 if($gallery_count > 1){
