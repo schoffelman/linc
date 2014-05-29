@@ -7,6 +7,7 @@ if (!is_page(array('export', 'all', 'cornheads', 'no-dupes')))
 
 header("Content-Type: text/plain; charset=utf-8");
 global $post;
+define('IMAGE_GALLERY_SIZE', '-220x165');
 //echo "<pre>";print_r($post);echo "</pre>";
 
 define('ITEMS_PER_PAGE', '-1');
@@ -107,7 +108,9 @@ if ($gallery_count >= 1) {
 $gallery_list .= $featured_image;
 
 foreach($gallery_images as $key => $gallery_image) {
-	$gallery_list .= $gallery_image;
+	$gallery_image_clean = str_replace(IMAGE_GALLERY_SIZE, '', $gallery_image);
+// echo "<pre>"; print_r($gallery_image_clean); echo "</pre>";
+	$gallery_list .= $gallery_image_clean;
 	if ($key+1 < $gallery_count) {
 		$gallery_list .= ", ";
 	}
